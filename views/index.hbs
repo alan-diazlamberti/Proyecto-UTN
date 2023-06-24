@@ -1,2 +1,274 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+{{!-- Comienza navbar --}}
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container-fluid ms-3 p-3">
+        <a class="navbar-brand" href="#">
+            <img class="logo" src="/images/logo.png" alt="logo" width="70" height="70">
+        </a>
+        <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#recetas">Recetas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#nosotros">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contactanos">Contactanos</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{{!-- Finaliza navbar --}}
+
+{{!-- Comienza inicio --}}
+<div id="inicio" class="container-fluid">
+    <div class="row align-items-center hero-image">
+        <div class="col-6 offset-3 search-box">
+            <h1 class="fw-bold text-center">¿Que cocinamos?</h1>
+            <form class="d-flex mt-4">
+                <input class="form-control search-bar px-4" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-light btn-search ms-3 px-4" type="submit"><img src="/images/icons/search.svg"
+                        alt="searchIcon"></button>
+            </form>
+        </div>
+    </div>
+</div>
+{{!-- Finaliza inicio --}}
+
+{{!-- Comienza recetas --}}
+<div id="recetas" class="container-fluid scroll-section">
+    <div class="row titulo-recetas">
+        <div class="col py-4">
+            <h2 class="text-center fw-bold">Recetas</h2>
+        </div>
+    </div>
+    {{!-- Cards --}}
+    <div class="row container-recetas">
+        <div class="col">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+                <div class="card">
+                    <a href="#">
+                        <img src="/images/cards/matambre-a-la-pizza.png" class="card-img" alt="matambre-a-la-pizza">
+                        <div class="card-body">
+                            <h5 class="card-title">Matambre a la pizza</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="#">
+                        <img src="/images/cards/pastel-de-papas.png" class="card-img" alt="pastel-de-papas">
+                        <div class="card-body">
+                            <h5 class="card-title">Pastel de papas</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="#">
+                        <img src="/images/cards/pollo-marsala.png" class="card-img" alt="pollo-marsala">
+                        <div class="card-body">
+                            <h5 class="card-title">Pollo Marsala</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+                <div class="card">
+                    <a href="#">
+                        <img src="/images/cards/risotto-de-hongos.png" class="card-img" alt="risotto-de-hongos">
+                        <div class="card-body">
+                            <h5 class="card-title">Risotto de hongos</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="#">
+                        <img src="/images/cards/sopa-de-verduras.png" class="card-img" alt="sopa-de-verduras">
+                        <div class="card-body">
+                            <h5 class="card-title">Sopa de verduras</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-sorrentinos">
+                        <img src="/images/cards/sorrentinos.png" class="card-img" alt="sorrentinos">
+                        <div class="card-body">
+                            <h5 class="card-title">Sorrentinos</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{!-- Boton ver mas --}}
+        <div class="ver-mas d-flex justify-content-center">
+            <button type="button" class="btn btn-warning">Ver más</button>
+        </div>
+    </div>
+    {{!-- Modal --}}
+    <div class="modal fade" id="modal-sorrentinos" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Sorrentinos</h1>
+                    <h6>20p</h6>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptatum accusantium consequuntur
+                    quaerat
+                    deleniti dolores labore ipsam nulla, rerum optio dolore asperiores assumenda natus beatae nemo aut
+                    officia
+                    id
+                    tempora!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{!-- Finaliza recetas --}}
+
+{{!-- Comienza nosotros --}}
+<div id="nosotros" class="container-fluid bg-warning scroll-section">
+    <div class="row titulo-nosotros">
+        <div class="col py-4">
+            <h2 class="text-center fw-bold">Nosotros</h2>
+        </div>
+    </div>
+    {{!-- Carousel --}}
+    <div class="container-nosotros">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <div id="carousel-nosotros" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel-nosotros" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carousel-nosotros" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner text-center p-5">
+                        <div class="carousel-item active">
+                            <img class="border border-3 border-dark rounded-circle" src="/images/cocinero.png"
+                                alt="cocinero">
+                            <h5 class="fw-semibold pt-3">Alan</h5>
+                            <p class="fst-italic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora
+                                sapiente at
+                                saepe
+                                ex
+                                est delectus sed
+                                quibusdam animi ipsa. Dolore asperiores iure facere voluptatibus? Non, quae? Ex
+                                blanditiis quis saepe?
+                            </p>
+                            <a href="https://www.instagram.com/alan_diazlamberti/" target="_blank"><img class="icono-ig"
+                                    src="/images/icons/icono-instagram.png" alt="icono-ig"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="border border-3 border-dark rounded-circle" src="/images/cocinera.png"
+                                alt="cocinera">
+                            <h5 class="fw-semibold pt-3">Micaela</h5>
+                            <p class="fst-italic">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum,
+                                temporibus
+                                reprehenderit natus animi
+                                obcaecati quo placeat ducimus doloribus repellendus. Dolor veritatis in sapiente nobis
+                                nisi. Eaque
+                                quis
+                                dolor quidem ea.</p>
+                            <a href="https://www.instagram.com/mikypitrau/" target="_blank"><img class="icono-ig"
+                                    src="/images/icons/icono-instagram.png" alt="icono-ig"></a>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-nosotros"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-nosotros"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{!-- Finaliza nosotros --}}
+
+{{!-- Comienza contactanos --}}
+<div id="contactanos" class="container-fluid">
+    <div class="row titulo-contactanos">
+        <div class="col py-4">
+            <h2 class="text-center fw-bold">Contactanos</h2>
+        </div>
+    </div>
+
+    {{!-- Form --}}
+    <div class="container-contactanos">
+        <form method="post">
+            <div class="row">
+                <div class="col col-xxl-3 col-xl-4 col-md-5 col-sm-6">
+                    <input type="text" class="form-control" placeholder="Nombre" name="nombre">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-xxl-3 col-xl-4 col-md-5 col-sm-6">
+                    <input type="email" class="form-control" placeholder="Email" name="email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-xxl-3 col-xl-4 col-md-5 col-sm-6">
+                    <textarea class="form-control" rows="3" placeholder="Mensaje" name="mensaje"></textarea>
+                </div>
+            </div>
+            <div class="col pt-4 d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    </div>
+</div>
+{{!-- Finaliza contactanos --}}
+
+{{!-- Comienza footer --}}
+<footer class="container-fluid">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <ul class="list-inline">
+                <li class="list-inline-item px-2">
+                    <a href="https://twitter.com/diaz_lamberti" target="_blank"><img src="/images/icons/twitter.svg"
+                            alt="twitter"></a>
+                </li>
+                <li class="list-inline-item px-2">
+                    <a href="https://www.instagram.com/alan_diazlamberti/" target="_blank"><img
+                            src="/images/icons/instagram.svg" alt="instagram"></a>
+                </li>
+                <li class="list-inline-item px-2">
+                    <a href="https://github.com/alan-diazlamberti" target="_blank"><img src="/images/icons/github.svg"
+                            alt="github"></a>
+                </li>
+                <li class="list-inline-item px-2">
+                    <a href="" target="_blank"><img src="/images/icons/linkedin.svg" alt="linkedin"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center">
+            <div class="d-block d-sm-inline">Copyright
+                <img src="/images/icons/c-circle.svg" alt=""> 2023
+            </div>
+            <div class="d-block d-sm-inline">Diseñado por Alan Diaz Lamberti</div>
+        </div>
+    </div>
+</footer>
+{{!-- Finaliza footer --}}

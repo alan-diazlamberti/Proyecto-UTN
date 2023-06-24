@@ -1,0 +1,180 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2:hover {
+    cursor: default;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll-section {
+    scroll-margin-top: 80px;
+}
+
+/* Estilos de navbar */
+.navbar {
+    font-weight: 700;
+    font-size: 1rem;
+    background-color: #ffdb87 !important;
+}
+
+.nav-link {
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.logo {
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-link:hover {
+    transform: scale(1.1);
+    border-bottom: 1px solid black;
+}
+
+/* Estilos de inicio */
+.hero-image {
+    background-image: url(/images/hero.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.search-box {
+    width: auto;
+    height: auto;
+    margin: auto;
+    color: white;
+}
+
+.search-bar {
+    background-color: white;
+    font-size: 16px;
+}
+
+.search-bar:focus {
+    background-color: white;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.btn-search {
+    border: none;
+    background-color: white;
+}
+
+.btn-search:hover {
+    background-color: #FFCC57;
+}
+
+.btn-search:focus {
+    background-color: white !important;
+}
+
+/* Estilos de recetas */
+#recetas {
+    background-color: #fff3d7;
+}
+
+.titulo-recetas {
+    padding-top: 3rem;
+}
+
+.container-recetas {
+    padding-bottom: 6rem;
+    padding-top: 2rem;
+}
+
+.ver-mas {
+    padding-top: 4rem;
+}
+
+/* Estilos de cards */
+.card {
+    border: none;
+    width: 20rem;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card-body {
+    background-color: black;
+    color: white;
+}
+
+.card-img {
+    border-radius: 0;
+}
+
+.card:hover {
+    transition: all .2s ease-in-out;
+    opacity: 0.9;
+}
+
+/* Estilos de modal */
+/* ---------------- */
+
+/* Estilos de nosotros */
+.titulo-nosotros {
+    padding-top: 6rem;
+}
+
+.container-nosotros {
+    padding-bottom: 6rem;
+}
+
+.carousel-inner img {
+    max-height: 5rem;
+}
+
+.icono-ig {
+    max-height: 2rem !important;
+}
+
+/* Estilos de contactanos */
+.titulo-contactanos {
+    padding-top: 7rem;
+}
+
+.container-contactanos {
+    padding-bottom: 9rem;
+    padding-top: 3rem;
+}
+
+.container-contactanos .col {
+    padding-bottom: 1rem;
+}
+
+.container-contactanos .row {
+    justify-content: center;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+/* Estilos de footer */
+footer {
+    background-color: #ffdb87;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* Media queries */
+@media (min-width: 768px) {
+    .carousel-inner {
+        padding-left: 8rem !important;
+        padding-right: 8rem !important;
+    }
+}
