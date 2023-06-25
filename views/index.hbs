@@ -215,7 +215,7 @@
 
     {{!-- Form --}}
     <div class="container-contactanos">
-        <form method="post">
+        <form method="post" onsubmit="return validarForm()">
             <div class="row">
                 <div class="col col-xxl-3 col-xl-4 col-md-5 col-sm-6">
                     <input type="text" class="form-control" placeholder="Nombre" name="nombre">
@@ -234,9 +234,13 @@
             <div class="col pt-4 d-flex justify-content-center">
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </div>
+            <div class="col d-flex justify-content-center">
+                <p class="link-success">{{sucess}}</p>
+            </div>
         </form>
     </div>
 </div>
+
 {{!-- Finaliza contactanos --}}
 
 {{!-- Comienza footer --}}
