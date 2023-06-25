@@ -1,6 +1,6 @@
 {
-  "name": "aym-node",
-  "version": "0.0.0",
+  "name": "aym",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www"
