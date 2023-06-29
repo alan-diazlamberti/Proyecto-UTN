@@ -28,17 +28,22 @@ html {
     transition: all 0.3s ease;
 }
 
+.nav-link:hover {
+    transform: scale(1.1);
+    border-bottom: 1px solid black;
+}
+
+.nav-link.active {
+    border-bottom: 1px solid black;
+    transform: scale(1.1);
+}
+
 .logo {
     transition: all 0.3s ease;
 }
 
 .logo:hover {
     transform: scale(1.1);
-}
-
-.nav-link:hover {
-    transform: scale(1.1);
-    border-bottom: 1px solid black;
 }
 
 /* Estilos de inicio */
