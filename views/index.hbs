@@ -56,7 +56,7 @@
         <div class="col">
             <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
                 <div class="card">
-                    <a href="#">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-matambre-a-la-pizza">
                         <img src="/images/cards/matambre-a-la-pizza.png" class="card-img" alt="matambre-a-la-pizza">
                         <div class="card-body">
                             <h5 class="card-title">Matambre a la pizza</h5>
@@ -64,7 +64,7 @@
                     </a>
                 </div>
                 <div class="card">
-                    <a href="#">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-pastel-de-papas">
                         <img src="/images/cards/pastel-de-papas.png" class="card-img" alt="pastel-de-papas">
                         <div class="card-body">
                             <h5 class="card-title">Pastel de papas</h5>
@@ -152,9 +152,9 @@
                 </div>
                 <div class="card">
                     <a href="#">
-                        <img src="/images/cards/ñoquis.png" class="card-img" alt="ñoquis">
+                        <img src="/images/cards/ñoquis-de-calabaza.png" class="card-img" alt="ñoquis">
                         <div class="card-body">
-                            <h5 class="card-title">Ñoquis</h5>
+                            <h5 class="card-title">Ñoquis de calabaza</h5>
                         </div>
                     </a>
                 </div>
@@ -175,12 +175,440 @@
     </div>
 
     {{!-- Modales --}}
+    <div class="modal fade" id="modal-matambre-a-la-pizza" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Matambre a la pizza</h5>
+                    <p><img src="/images/icons/schedule.svg">150 min.<img src="/images/icons/person.svg">4</p>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredientes:</h6>
+                    <ul>
+                        <li>1 matambre de 700 gr. a 1 kg.</li>
+                        <li>1 litro de leche</li>
+                        <li>1 cubito de caldo de verduras</li>
+                        <li>1 taza de salsa de tomate</li>
+                        <li>250 gr. de mozzarella</li>
+                        <li>1 cebolla</li>
+                        <li>1/2 pimiento rojo</li>
+                        <li>150 gr. de jamon en fetas</li>
+                        <li>6 dientes de ajo</li>
+                        <li>150 gr. de aceitunas</li>
+                        <li>Sal, pimienta, ajo en polvo, ají molido, orégano</li>
+                    </ul>
+                    <br>
+                    <h6>Preparación</h6>
+                    <ol>
+                        <li>Desgrasar el matambre lo máximo posible y ponerlo en una olla con la leche, el caldo de
+                            verduras,
+                            sal, pimienta, ají molido y 4 dientes de ajo. Dejar a fuego bajo por 2 horas. Este es el
+                            secreto para que el matambre a la pizza quede tierno, tan tierno que se deshace!</li>
+                        <li>Picar la cebolla, el pimiento rojo y los ajos. Saltear en una sartén con aceite de oliva.
+                            Agregar la salsa de tomate. Salpimentar y condimentar con ají molido y orégano. Reservar.
+                        </li>
+                        <li>Una vez que el matambre esté listo, tirarlo a la parrilla por unos 5 minutos.</li>
+                        <li>Agregar el tuco, la mozzarella y las fetas de jamón. Dejarlo en la parrilla hasta que se
+                            derrita la mozzarella.</li>
+                        <li>Al sacarlo de la parrilla finalizar con las aceitunas y orégano espolvereado por encima.
+                        </li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-pastel-de-papas" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Pastel de papas</h5>
+                    <p><img src="/images/icons/schedule.svg">60 min.<img src="/images/icons/person.svg">3</p>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredientes:</h6>
+                    <ul>
+                        <li>1 kg. de papas</li>
+                        <li>1/2 kg. de carne picada</li>
+                        <li>1 pimiento rojo</li>
+                        <li>1 cebolla</li>
+                        <li>2 dientes de ajo</li>
+                        <li>1 cubito de caldo de carne</li>
+                        <li>Ajo en polvo, pimentón, pimienta, sa</li>
+                        <li>1 cucharada de manteca</li>
+                        <li>1 chorrito de leche</li>
+                        <li>2 huevos</li>
+                        <li>100 gr. de aceitunas</li>
+                    </ul>
+                    <br>
+                    <h6>Preparación</h6>
+                    <ol>
+                        <li>Cortar las papas en cubos y ponerlas a hervir con sal.</li>
+                        <li>Picar la cebolla, el ajo y el pimiento rojo. Sofreir en una olla o sartén</li>
+                        <li>Cuando la cebolla está transparente, agregar la carne y sofreirla mientras se deshace con
+                            una cuchara.</li>
+                        <li>Salpimentar, agregar el cubito de caldo, el ajo en polvo, el pimentón y cocer la carne
+                            15min.</li>
+                        <li>Una vez que las patatas estén hervidas, hacer en caliente un puré con la manteca y la leche.
+                            Salpimentar.</li>
+                        <li>Agregar al relleno los huevos picados y las aceitunas</li>
+                        <li>Poner en una fuente para horno una base de puré, agregar por encima la carne (dejar que se
+                            entibie un poco) y colocar otra capa de puré. Para distribuirlo, se moja la cuchara con agua
+                            fría.</li>
+                        <li>Llevar a horno fuerte unos 15-20 min. o hasta que la parte de arriba esté
+                            crocante.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-matambre-a-la-pizza" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Matambre a la pizza</h5>
+                    <p><img src="/images/icons/schedule.svg">(tiempo de coccion) min<img
+                            src="/images/icons/person.svg">(porciones)</p>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredientes:</h6>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <br>
+                    <h6>Preparación</h6>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-pastel-de-papas" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Pastel de papas</h5>
+                    <p><img src="/images/icons/schedule.svg">(tiempo de coccion) min<img
+                            src="/images/icons/person.svg">(porciones)</p>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredientes:</h6>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <br>
+                    <h6>Preparación</h6>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-" titulo-de-receta"" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" titulo-de-receta></h5>
+                    <p><img src="/images/icons/schedule.svg">(tiempo de coccion) min<img
+                            src="/images/icons/person.svg">(porciones)</p>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredientes:</h6>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <br>
+                    <h6>Preparación</h6>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-" titulo-de-receta"" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" titulo-de-receta></h5>
+                    <p><img src="/images/icons/schedule.svg">(tiempo de coccion) min<img
+                            src="/images/icons/person.svg">(porciones)</p>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredientes:</h6>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <br>
+                    <h6>Preparación</h6>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-" titulo-de-receta"" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" titulo-de-receta></h5>
+                    <p><img src="/images/icons/schedule.svg">(tiempo de coccion) min<img
+                            src="/images/icons/person.svg">(porciones)</p>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredientes:</h6>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <br>
+                    <h6>Preparación</h6>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-" titulo-de-receta"" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" titulo-de-receta></h5>
+                    <p><img src="/images/icons/schedule.svg">(tiempo de coccion) min<img
+                            src="/images/icons/person.svg">(porciones)</p>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredientes:</h6>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <br>
+                    <h6>Preparación</h6>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-" titulo-de-receta"" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" titulo-de-receta></h5>
+                    <p><img src="/images/icons/schedule.svg">(tiempo de coccion) min<img
+                            src="/images/icons/person.svg">(porciones)</p>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredientes:</h6>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <br>
+                    <h6>Preparación</h6>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-" titulo-de-receta"" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" titulo-de-receta></h5>
+                    <p><img src="/images/icons/schedule.svg">(tiempo de coccion) min<img
+                            src="/images/icons/person.svg">(porciones)</p>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredientes:</h6>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <br>
+                    <h6>Preparación</h6>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
     <div class="modal fade" id="modal-pollo-marsala" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Pollo Marsala</h5>
-                    <p><img src="/images/icons/schedule.svg">40 min<img src="/images/icons/person.svg">3</p>
+                    <p><img src="/images/icons/schedule.svg">40 min.<img src="/images/icons/person.svg">3</p>
                 </div>
                 <div class="modal-body">
                     <h6>Ingredientes:</h6>
@@ -189,8 +617,8 @@
                         <li>1 cucharada de harina</li>
                         <li>Aceite de oliva</li>
                         <li>1 cucharada de manteca</li>
-                        <li>4 ajos</li>
-                        <li>300gr de champiñones cortados</li>
+                        <li>4 dientes de ajo</li>
+                        <li>300 gr. de champiñones cortados</li>
                         <li>3/4 taza de vino Marsala</li>
                         <li>3/4 taza de caldo de pollo</li>
                         <li>Perejil</li>
@@ -223,6 +651,7 @@
             </div>
         </div>
     </div>
+
 
 
 
