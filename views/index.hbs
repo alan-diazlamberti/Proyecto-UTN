@@ -72,7 +72,7 @@
                     </a>
                 </div>
                 <div class="card">
-                    <a href="#">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-pollo-marsala">
                         <img src="/images/cards/pollo-marsala.png" class="card-img" alt="pollo-marsala">
                         <div class="card-body">
                             <h5 class="card-title">Pollo Marsala</h5>
@@ -173,21 +173,49 @@
             <button type="button" class="btn btn-warning" onclick="verMas()">Ver más</button>
         </div>
     </div>
-    {{!-- Modal --}}
-    <div class="modal fade" id="modal-sorrentinos" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
+
+    {{!-- Modales --}}
+    <div class="modal fade" id="modal-pollo-marsala" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5">Sorrentinos</h1>
-                    <h6>20p</h6>
+                    <h5 class="modal-title">Pollo Marsala</h5>
+                    <p><img src="/images/icons/schedule.svg">40 min<img src="/images/icons/person.svg">3</p>
                 </div>
                 <div class="modal-body">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptatum accusantium consequuntur
-                    quaerat
-                    deleniti dolores labore ipsam nulla, rerum optio dolore asperiores assumenda natus beatae nemo aut
-                    officia
-                    id
-                    tempora!
+                    <h6>Ingredientes:</h6>
+                    <ul>
+                        <li>4 pechugas de pollo cortadas</li>
+                        <li>1 cucharada de harina</li>
+                        <li>Aceite de oliva</li>
+                        <li>1 cucharada de manteca</li>
+                        <li>4 ajos</li>
+                        <li>300gr de champiñones cortados</li>
+                        <li>3/4 taza de vino Marsala</li>
+                        <li>3/4 taza de caldo de pollo</li>
+                        <li>Perejil</li>
+                        <li>Sal y pimienta a gusto</li>
+                    </ul>
+                    <br>
+                    <h6>Preparación</h6>
+                    <ol>
+                        <li>Dividir cada pechuga en 2 partes y salpimentar. Con un martillo ablandador, golpear las
+                            pechugas para que alcancen el mismo grosor en todas sus partes y al mismo tiempo conseguir
+                            un bocado más tierno.
+                            Enharinar las pechugas de pollo.
+                        </li>
+                        <li>En una sartén con un chorro de aceite de oliva y la cucharada de manteca, sofreír las
+                            pechugas
+                            aproximadamente 3 minutos por cada lado. Tienen que quedar doradas por fuera. Reservar.</li>
+                        <li>En el mismo aceite saltear los ajos previamente picados.</li>
+                        <li>Cuando los ajos empiecen a dorarse añadir los champiñones y cocinar durante un par de
+                            minutos.</li>
+                        <li>Luego agregar la harina y revolver constantemente para evitar grumos.</li>
+                        <li>Incorporar el vino marsala a la cazuela. Subir el fuego para que se evapore el alcohol.</li>
+                        <li>Añadir las pechugas de pollo y el caldo de pollo. Cocinar a fuego suave durante 10 minutos
+                            aproximadamente.</li>
+                        <li>Picar unas hojas de perejil. Espolvorear por encima del pollo justo antes de servir.</li>
+                    </ol>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -195,6 +223,12 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
 </div>
 {{!-- Finaliza recetas --}}
 
