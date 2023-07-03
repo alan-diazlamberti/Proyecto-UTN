@@ -42,6 +42,11 @@ html {
     transition: all 0.3s ease;
 }
 
+.titulo {
+    margin-left: 15px;
+    margin-right: 20px;
+}
+
 .logo:hover {
     transform: scale(1.1);
 }
