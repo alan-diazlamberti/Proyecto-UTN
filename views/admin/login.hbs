@@ -12,9 +12,11 @@
                         <input type="password" class="form-control my-3 py-2" placeholder="Contraseña" name="password">
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary btn-login">Iniciar Sesión</button>
-                            {{!-- <div class="col d-flex justify-content-center">
-                                <p class="link-success">{{sucess}}</p>
-                            </div> --}}
+                            <div class="col d-flex justify-content-center">
+                                {{#if error}}
+                                <p>Usuario o contraseña incorrecta.</p>
+                                {{/if}}
+                            </div>
                         </div>
                     </form>
                     <div class="btn-volver text-center">
