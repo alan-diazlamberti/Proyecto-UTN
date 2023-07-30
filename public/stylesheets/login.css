@@ -1,0 +1,33 @@
+/* Estilos de login */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F6F4EB;
+}
+
+.container-login {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.card:hover {
+    opacity: 100%;
+}
+
+.card-body {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.titulo-login {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.btn-login {
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+.btn-volver {
+    margin-bottom: 100px;
+}
