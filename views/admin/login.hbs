@@ -1,0 +1,32 @@
+{{!-- Comienza login --}}
+<div id="contactanos" class="container-fluid">
+    <div class="row titulo-contactanos">
+        <div class="col py-4">
+            <h2 class="text-center fw-bold">Bienvenido</h2>
+        </div>
+    </div>
+
+    {{!-- Form --}}
+    <div class="container-contactanos">
+        <form method="post">
+            <div class="row">
+                <div class="col col-xxl-3 col-xl-4 col-md-5 col-sm-6">
+                    <input type="text" class="form-control" placeholder="Usuario" name="usuario">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-xxl-3 col-xl-4 col-md-5 col-sm-6">
+                    <input type="email" class="form-control" placeholder="Email" name="email">
+                </div>
+            </div>
+    </div>
+    <div class="col pt-4 d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+    </div>
+    {{!-- <div class="col d-flex justify-content-center">
+        <p class="link-success">{{sucess}}</p>
+    </div> --}}
+    </form>
+</div>
+</div>
+{{!-- Finaliza login --}}

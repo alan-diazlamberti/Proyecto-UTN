@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 27-07-2023 a las 02:12:11
+-- Tiempo de generación: 30-07-2023 a las 17:25:49
 -- Versión del servidor: 8.0.31
 -- Versión de PHP: 8.0.26
 
@@ -24,11 +24,11 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Estructura de tabla para la tabla `users`
 --
 
-DROP TABLE IF EXISTS `usuarios`;
-CREATE TABLE IF NOT EXISTS `usuarios` (
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
   `ID` int NOT NULL AUTO_INCREMENT,
   `username` varchar(30) NOT NULL,
   `password` varchar(60) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
@@ -36,10 +36,10 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 
 --
--- Volcado de datos para la tabla `usuarios`
+-- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `usuarios` (`ID`, `username`, `password`) VALUES
+INSERT INTO `users` (`ID`, `username`, `password`) VALUES
 (1, 'alan', '81dc9bdb52d04dc20036dbd8313ed055'),
 (2, 'micaela', '81dc9bdb52d04dc20036dbd8313ed055'),
 (3, 'flavia', '81dc9bdb52d04dc20036dbd8313ed055');
