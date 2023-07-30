@@ -1,6 +1,8 @@
 /* Estilos generales */
 body {
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 h1,
@@ -25,31 +27,12 @@ html {
 
 .nav-link {
     margin-left: 10px;
-    transition: all 0.3s ease;
-}
-
-.nav-link:hover {
-    transform: scale(1.1);
-    border-bottom: 1px solid black;
-}
-
-.nav-link.active {
-    border-bottom: 1px solid black;
-    transform: scale(1.1);
-}
-
-.logo {
-    transition: all 0.3s ease;
 }
 
 .titulo {
     margin-left: 15px;
     margin-right: 20px;
     font-size: 17px;
-}
-
-.logo:hover {
-    transform: scale(1.1);
 }
 
 /* Estilos de inicio */
@@ -162,8 +145,6 @@ html {
     font-weight: 600;
 }
 
-.modal-dialog {}
-
 /* Estilos de nosotros */
 .titulo-nosotros {
     padding-top: 6rem;
@@ -215,5 +196,29 @@ footer {
     .carousel-inner {
         padding-left: 8rem !important;
         padding-right: 8rem !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .nav-link {
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+        transform: scale(1.1);
+        border-bottom: 1px solid black;
+    }
+
+    .nav-link.active {
+        border-bottom: 1px solid black;
+        transform: scale(1.1);
+    }
+
+    .logo {
+        transition: all 0.3s ease;
+    }
+
+    .logo:hover {
+        transform: scale(1.1);
     }
 }
