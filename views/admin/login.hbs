@@ -1,32 +1,36 @@
 {{!-- Comienza login --}}
-<div id="contactanos" class="container-fluid">
-    <div class="row titulo-contactanos">
-        <div class="col py-4">
-            <h2 class="text-center fw-bold">Bienvenido</h2>
+<div class="container container-login">
+    <div class="row">
+        <div class="d-flex justify-content-center col-12 col-sm-8 col-md-6 mx-auto asd">
+            <div class="card shadow">
+                <div class="card-body text-bg-light">
+                    <div class="titulo-login">
+                        <h2 class="text-center fs-1 fw-semibold">Bienvenido!</h2>
+                    </div>
+                    <form action="post">
+                        <input type="text" class="form-control my-3 py-2" placeholder="Usuario" name="username">
+                        <input type="password" class="form-control my-3 py-2" placeholder="Contraseña" name="password">
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-login">Iniciar Sesión</button>
+                            {{!-- <div class="col d-flex justify-content-center">
+                                <p class="link-success">{{sucess}}</p>
+                            </div> --}}
+                        </div>
+                    </form>
+                    <div class="btn-volver text-center">
+                        <a href="http://localhost:3000/"><button class="btn btn-danger mt-1"><svg class="me-1"
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z" />
+                                    <path fill-rule="evenodd"
+                                        d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z" />
+                                </svg>Volver
+                            </button></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-    {{!-- Form --}}
-    <div class="container-contactanos">
-        <form method="post">
-            <div class="row">
-                <div class="col col-xxl-3 col-xl-4 col-md-5 col-sm-6">
-                    <input type="text" class="form-control" placeholder="Usuario" name="usuario">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col col-xxl-3 col-xl-4 col-md-5 col-sm-6">
-                    <input type="email" class="form-control" placeholder="Email" name="email">
-                </div>
-            </div>
-    </div>
-    <div class="col pt-4 d-flex justify-content-center">
-        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
-    </div>
-    {{!-- <div class="col d-flex justify-content-center">
-        <p class="link-success">{{sucess}}</p>
-    </div> --}}
-    </form>
-</div>
 </div>
 {{!-- Finaliza login --}}
