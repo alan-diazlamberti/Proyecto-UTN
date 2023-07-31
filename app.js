@@ -8,7 +8,7 @@ require("dotenv").config();
 
 var indexRouter = require("./routes/index");
 var loginRouter = require("./routes/admin/login");
-var adminRouter = require("./routes/admin/admin");
+var panelRouter = require("./routes/admin/panel");
 
 var app = express();
 
@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/admin/login", loginRouter);
-app.use("/admin/admin", adminRouter);
+app.use("/admin/panel", panelRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
