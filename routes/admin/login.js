@@ -10,18 +10,13 @@ router.get("/", function (req, res, next) {
 
 router.post("/", async (req, res, next) => {
   try {
-    var usuario = req.body.usuario;
+    var usuario = req.body.username;
     var password = req.body.password;
 
-    var data = await usuariosModel.getUserByUsernameAndPassword(
-      usuario,
-      password
-    );
+    var data = await usuariosModel.getUserAndPassword(usuario, password);
 
     if (data != undefined) {
-      req.session.id_user = data.ID;
-      req.session.nombre = data.username;
-      res.redirect("admin/");
+      res.redirect("admin/panel");
     } else {
       res.render("admin/login", {
         layout: "admin/layoutAdmin",
