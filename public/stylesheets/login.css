@@ -35,3 +35,7 @@ body {
 .btn-volver {
     margin-bottom: 100px;
 }
+
+.btn-volver svg {
+    margin-bottom: 1px;
+}
