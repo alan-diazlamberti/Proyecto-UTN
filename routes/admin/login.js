@@ -4,7 +4,7 @@ var usuariosModel = require("../../database/usuariosModel");
 
 router.get("/", function (req, res, next) {
   res.render("admin/login", {
-    layout: "admin/layoutAdmin",
+    layout: "admin/layoutLogin",
   });
 });
 
@@ -16,10 +16,10 @@ router.post("/", async (req, res, next) => {
     var data = await usuariosModel.getUserAndPassword(usuario, password);
 
     if (data != undefined) {
-      res.redirect("admin/panel");
+      res.redirect("panel");
     } else {
       res.render("admin/login", {
-        layout: "admin/layoutAdmin",
+        layout: "admin/layoutLogin",
         error: true,
       });
     }

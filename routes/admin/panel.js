@@ -3,7 +3,7 @@ var router = express.Router();
 
 router.get("/", function (req, res, next) {
   res.render("admin/panel", {
-    layout: "admin/layoutAdmin",
+    layout: "admin/layoutPanel",
     // usuario: req.session.username,
   });
 });
