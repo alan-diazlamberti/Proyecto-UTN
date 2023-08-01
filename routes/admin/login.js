@@ -16,6 +16,8 @@ router.post("/", async (req, res, next) => {
     var data = await usuariosModel.getUserAndPassword(usuario, password);
 
     if (data != undefined) {
+      req.session.id = data.ID;
+      req.session.user = data.username;
       res.redirect("panel");
     } else {
       res.render("admin/login", {

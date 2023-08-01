@@ -4,7 +4,7 @@ var router = express.Router();
 router.get("/", function (req, res, next) {
   res.render("admin/panel", {
     layout: "admin/layoutPanel",
-    // usuario: req.session.username,
+    usuario: req.session.user,
   });
 });
 
