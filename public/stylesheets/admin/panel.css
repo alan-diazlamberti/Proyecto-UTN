@@ -1,0 +1,9 @@
+/* Estilos de panel */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F6F4EB;
+}
+
+.btn-salir svg {
+    margin-bottom: 1px;
+}
