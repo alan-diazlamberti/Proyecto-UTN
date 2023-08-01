@@ -32,9 +32,22 @@ app.use(
   })
 );
 
+secured = async (req, res, next) => {
+  try {
+    console.log(req.session.id);
+    if (req.session.id_user) {
+      next();
+    } else {
+      res.redirect("login");
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 app.use("/", indexRouter);
 app.use("/admin/login", loginRouter);
-app.use("/admin/panel", panelRouter);
+app.use("/admin/panel", secured, panelRouter);
 app.use("/admin/logout", logoutRotuer);
 
 // catch 404 and forward to error handler
