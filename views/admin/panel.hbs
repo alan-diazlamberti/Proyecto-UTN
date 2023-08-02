@@ -1,11 +1,83 @@
-<h2>Hola {{usuario}}</h2>
-<div class="btn-salir text-center">
-    <a href="/admin/logout"><button class="btn btn-danger"><svg class="me-1" xmlns="http://www.w3.org/2000/svg"
-                width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z" />
-                <path fill-rule="evenodd"
-                    d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z" />
-            </svg>Salir
-        </button></a>
+<div class="container">
+
+    <div class="row">
+        <div class="col">
+            <h2 class="fw-bolder text-center titulo-recetas">RECETAS</h2>
+        </div>
+    </div>
+
+    {{!-- Comienza row options --}}
+    <div class="row mb-3">
+        <div class="col">
+            <a href="#" class="btn btn-success">
+                <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+                </svg>
+                Agregar</a>
+        </div>
+        <div class="col-7 col-lg-5 col-xl-4 search-bar">
+            <form class="d-flex">
+                <input class="form-control search-box" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-light btn-search ms-1 px-4" type="submit"><img src="/images/icons/search.svg"
+                        alt="searchIcon"></button>
+            </form>
+        </div>
+        <div class="col d-flex justify-content-end">
+            <a href="/admin/logout"><button class="btn btn-danger"><svg class="me-2" xmlns="http://www.w3.org/2000/svg"
+                        width="18" height="18" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z" />
+                        <path fill-rule="evenodd"
+                            d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z" />
+                    </svg>Salir
+                </button></a>
+        </div>
+    </div>
+    {{!-- Finaliza row options --}}
+
+    {{!-- Comienza table --}}
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr class="table-dark">
+                        <th scope="col">#</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col" class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each recetas}}
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>{{titulo}}</td>
+                        <td class="text-center">
+                            Editar
+                            Eliminar
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {{!-- Finaliza table --}}
+
+    {{!-- Comienza pagination --}}
+    <div class="row fixed-bottom mb-3">
+        <div class="col">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    {{!-- Finaliza pagination --}}
 </div>
