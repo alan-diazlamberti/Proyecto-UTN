@@ -4,6 +4,35 @@ body {
     background-color: #F6F4EB;
 }
 
+/* Estilos de navbar */
+.navbar {
+    font-weight: 700;
+    font-size: 1rem;
+    background-color: #ffdb87 !important;
+}
+
+.nav-link {
+    margin-left: 10px;
+}
+
+.titulo {
+    margin-left: 15px;
+    margin-right: 20px;
+    font-size: 17px;
+}
+
+/* Estilos de panel */
 .btn-salir svg {
     margin-bottom: 1px;
+}
+
+/* Media queries */
+@media (min-width: 992px) {
+    .logo {
+        transition: all 0.3s ease;
+    }
+
+    .logo:hover {
+        transform: scale(1.1);
+    }
 }
