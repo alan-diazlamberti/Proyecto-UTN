@@ -1,7 +1,15 @@
-/* Estilos de panel */
+/* Estilos generales */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #F6F4EB;
+}
+
+.container {
+    margin-top: 180px;
+}
+
+.titulo-recetas {
+    margin-bottom: 45px;
 }
 
 /* Estilos de navbar */
@@ -21,9 +29,51 @@ body {
     font-size: 17px;
 }
 
-/* Estilos de panel */
-.btn-salir svg {
-    margin-bottom: 1px;
+.btn-inicio {
+    margin-right: 68px;
+}
+
+/* Estilos de search-bar */
+.search-box:focus {
+    background-color: white;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.btn-search {
+    border: none;
+    background-color: white;
+}
+
+.btn-search:hover {
+    background-color: #FFCC57;
+}
+
+.btn-search:focus {
+    background-color: white !important;
+}
+
+/* Estilos de pagination */
+.page-item.active .page-link {
+    background-color: #CFD2CF;
+    border: none;
+    color: white;
+
+}
+
+.page-link {
+    color: #61677A;
+    border: none;
+}
+
+.page-link:hover {
+    color: #61677A;
+}
+
+.page-link:focus {
+    box-shadow: none;
+    background-color: #CFD2CF;
+    color: white;
 }
 
 /* Media queries */
@@ -34,5 +84,29 @@ body {
 
     .logo:hover {
         transform: scale(1.1);
+    }
+}
+
+@media (max-width: 767px) {
+    .search-bar {
+        order: 3;
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 418px) {
+    .btn-inicio {
+        margin-top: 15px;
+    }
+
+    .container {
+        margin-top: 220px;
+    }
+}
+
+@media (max-width: 425px) {
+    .titulo-recetas {
+        margin-bottom: 20px;
     }
 }
