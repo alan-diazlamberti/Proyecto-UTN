@@ -6,4 +6,10 @@ async function getRecetas() {
   return rows;
 }
 
-module.exports = { getRecetas };
+async function deleteRecetaByID(ID) {
+  var query = "delet from recetas where ID = ?";
+  var rows = await pool.query(query, [ID]);
+  return rows;
+}
+
+module.exports = { getRecetas, deleteRecetaByID };
