@@ -1,6 +1,6 @@
 var pool = require("./database");
 
-async function getRecetas() {
+async function getAllRecetas() {
   var query = "select * from recetas";
   var rows = await pool.query(query);
   return rows;
@@ -12,4 +12,4 @@ async function deleteRecetaByID(ID) {
   return rows;
 }
 
-module.exports = { getRecetas, deleteRecetaByID };
+module.exports = { getAllRecetas, deleteRecetaByID };
