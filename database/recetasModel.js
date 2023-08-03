@@ -7,7 +7,7 @@ async function getRecetas() {
 }
 
 async function deleteRecetaByID(ID) {
-  var query = "delet from recetas where ID = ?";
+  var query = "delete from recetas where ID = ?";
   var rows = await pool.query(query, [ID]);
   return rows;
 }

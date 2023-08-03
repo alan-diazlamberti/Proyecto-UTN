@@ -11,4 +11,10 @@ router.get("/", async function (req, res, next) {
   });
 });
 
+router.get("/eliminar/:ID", async function (req, res, next) {
+  var ID = req.params.ID;
+  await recetasModel.deleteRecetaByID(ID);
+  res.redirect("/admin/panel");
+});
+
 module.exports = router;
