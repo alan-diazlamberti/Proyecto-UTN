@@ -1,10 +1,15 @@
 var express = require("express");
 var router = express.Router();
 var nodemailer = require("nodemailer");
+var recetasModel = require("../database/recetasModel");
 
 /* GET home page. */
-router.get("/", function (req, res, next) {
-  res.render("index", { title: "Express" });
+router.get("/", async function (req, res, next) {
+  recetasCol1 = await recetasModel.getRecetasCol1();
+  recetasCol2 = await recetasModel.getRecetasCol2();
+  recetasCol3 = await recetasModel.getRecetasCol3();
+  recetasCol4 = await recetasModel.getRecetasCol4();
+  res.render("index", { recetasCol1, recetasCol2, recetasCol3, recetasCol4 });
 });
 
 router.post("/", async (req, res, next) => {

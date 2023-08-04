@@ -1,4 +1,4 @@
-{{!-- Comienza navbar --}}
+{{!-- Comienza section navbar --}}
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid ms-3 p-3">
         <a class="navbar-brand" href="#">
@@ -30,9 +30,9 @@
         </div>
     </div>
 </nav>
-{{!-- Finaliza navbar --}}
+{{!-- Finaliza section navbar --}}
 
-{{!-- Comienza inicio --}}
+{{!-- Comienza section inicio --}}
 <div id="inicio" class="container-fluid">
     <div class="row align-items-center hero-image">
         <div class="col-6 offset-3 search-box">
@@ -45,180 +45,107 @@
         </div>
     </div>
 </div>
-{{!-- Finaliza inicio --}}
+{{!-- Finaliza section inicio --}}
 
-{{!-- Comienza recetas --}}
+{{!-- Comienza section recetas --}}
 <div id="recetas" class="container-fluid scroll-section">
     <div class="row titulo-recetas">
         <div class="col py-4">
             <h2 class="text-center fw-bold">Recetas</h2>
         </div>
     </div>
-    {{!-- Cards --}}
+    {{!-- Comienzan cards --}}
     <div class="container-recetas">
         <div class="row">
             <div class="col">
                 <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+                    {{#each recetasCol1}}
                     <div class="card">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-matambre-a-la-pizza">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal{{ID}}">
                             <img src="/images/cards/matambre-a-la-pizza.png" class="card-img" alt="matambre-a-la-pizza">
                             <div class="card-body">
-                                <h5 class="card-title">Matambre a la pizza</h5>
+                                <h5 class="card-title">{{titulo}}</h5>
                             </div>
                         </a>
                     </div>
-                    <div class="card">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-pastel-de-papas">
-                            <img src="/images/cards/pastel-de-papas.png" class="card-img" alt="pastel-de-papas">
-                            <div class="card-body">
-                                <h5 class="card-title">Pastel de papas</h5>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-pollo-marsala">
-                            <img src="/images/cards/pollo-marsala.png" class="card-img" alt="pollo-marsala">
-                            <div class="card-body">
-                                <h5 class="card-title">Pollo Marsala</h5>
-                            </div>
-                        </a>
-                    </div>
+                    {{/each}}
                 </div>
             </div>
         </div>
+
         <div class="col">
             <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+                {{#each recetasCol2}}
                 <div class="card">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-risotto-de-hongos">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal{{ID}}">
                         <img src="/images/cards/risotto-de-hongos.png" class="card-img" alt="risotto-de-hongos">
                         <div class="card-body">
-                            <h5 class="card-title">Risotto de hongos</h5>
+                            <h5 class="card-title">{{titulo}}</h5>
                         </div>
                     </a>
                 </div>
-                <div class="card">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-sopa-de-verduras">
-                        <img src="/images/cards/sopa-de-verduras.png" class="card-img" alt="sopa-de-verduras">
-                        <div class="card-body">
-                            <h5 class="card-title">Sopa de verduras</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-sorrentinos">
-                        <img src="/images/cards/sorrentinos.png" class="card-img" alt="sorrentinos">
-                        <div class="card-body">
-                            <h5 class="card-title">Sorrentinos</h5>
-                        </div>
-                    </a>
-                </div>
+                {{/each}}
             </div>
         </div>
+
         {{!-- Columnas ocultas --}}
         <div class="col hidden">
             <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+                {{#each recetasCol3}}
                 <div class="card">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-guiso-de-lentejas">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal{{ID}}">
                         <img src="/images/cards/guiso-de-lentejas.png" class="card-img" alt="guiso-de-lentejas">
                         <div class="card-body">
-                            <h5 class="card-title">Guiso de lentejas</h5>
+                            <h5 class="card-title">{{titulo}}</h5>
                         </div>
                     </a>
                 </div>
-                <div class="card">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-empanadas-de-carne">
-                        <img src="/images/cards/empanadas-de-carne.png
-                        " class="card-img" alt="empanadas-de-carne">
-                        <div class="card-body">
-                            <h5 class="card-title">Empanadas de carne</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-pizza-de-jamon-y-queso">
-                        <img src="/images/cards/pizza-de-jamon-y-queso.png" class="card-img"
-                            alt="pizza-de-jamon-y-queso">
-                        <div class="card-body">
-                            <h5 class="card-title">Pizza de jamón y queso</h5>
-                        </div>
-                    </a>
-                </div>
+                {{/each}}
             </div>
         </div>
+
         <div class="col hidden">
             <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+                {{#each recetasCol4}}
                 <div class="card">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-ensalada-cesar">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal{{ID}}">
                         <img src="/images/cards/ensalada-cesar.png" class="card-img" alt="ensalada-caesar">
                         <div class="card-body">
-                            <h5 class="card-title">Ensalada César</h5>
+                            <h5 class="card-title">{{titulo}}</h5>
                         </div>
                     </a>
                 </div>
-                <div class="card">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-ñoquis-de-calabaza">
-                        <img src="/images/cards/ñoquis-de-calabaza.png" class="card-img" alt="ñoquis-de-calabaza">
-                        <div class="card-body">
-                            <h5 class="card-title">Ñoquis de calabaza</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-tortilla-de-papas">
-                        <img src="/images/cards/tortilla-de-papas.png" class="card-img" alt="tortilla-de-papas">
-                        <div class="card-body">
-                            <h5 class="card-title">Tortilla de papas</h5>
-                        </div>
-                    </a>
-                </div>
+                {{/each}}
             </div>
         </div>
+
         {{!-- Boton ver mas --}}
         <div class="ver-mas d-flex justify-content-center">
             <button type="button" class="btn btn-warning" onclick="verMas()">Ver más</button>
         </div>
-    </div>
 
-    {{!-- Modales --}}
-    <div class="modal fade" id="modal-matambre-a-la-pizza" tabindex="-1" aria-hidden="true">
+    </div>
+    {{!-- Finalizan cards --}}
+
+    {{!-- Comienzan modales --}}
+    {{#each recetasCol1}}
+    <div class="modal fade" id="modal{{ID}}" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Matambre a la pizza</h5>
-                    <p><img src="/images/icons/schedule.svg">150 min.<img src="/images/icons/person.svg">4</p>
+                    <h5 class="modal-title">{{titulo}}</h5>
+                    <p><img src="/images/icons/schedule.svg">{{minutos}} min.<img
+                            src="/images/icons/person.svg">{{porciones}}</p>
                 </div>
                 <div class="modal-body">
                     <h6>Ingredientes:</h6>
                     <ul>
-                        <li>1 matambre de 700 gr. a 1 kg.</li>
-                        <li>1 litro de leche</li>
-                        <li>1 cubito de caldo de verduras</li>
-                        <li>1 taza de salsa de tomate</li>
-                        <li>250 gr. de mozzarella</li>
-                        <li>1 cebolla</li>
-                        <li>1/2 pimiento rojo</li>
-                        <li>150 gr. de jamon en fetas</li>
-                        <li>6 dientes de ajo</li>
-                        <li>150 gr. de aceitunas</li>
-                        <li>Sal, pimienta, ajo en polvo, ají molido, orégano</li>
+                        <li>{{ingredientes}}</li>
                     </ul>
                     <br>
                     <h6>Preparación</h6>
                     <ol>
-                        <li>Desgrasar el matambre lo máximo posible y ponerlo en una olla con la leche, el caldo de
-                            verduras,
-                            sal, pimienta, ají molido y 4 dientes de ajo. Dejar a fuego bajo por 2 horas. Este es el
-                            secreto para que el matambre a la pizza quede tierno, tan tierno que se deshace!</li>
-                        <li>Picar la cebolla, el pimiento rojo y los ajos. Saltear en una sartén con aceite de
-                            oliva.
-                            Agregar la salsa de tomate. Salpimentar y condimentar con ají molido y orégano.
-                            Reservar.
-                        </li>
-                        <li>Una vez que el matambre esté listo, tirarlo a la parrilla por unos 5 minutos.</li>
-                        <li>Agregar el tuco, la mozzarella y las fetas de jamón. Dejarlo en la parrilla hasta que se
-                            derrita la mozzarella.</li>
-                        <li>Al sacarlo de la parrilla finalizar con las aceitunas y orégano espolvereado por encima.
-                        </li>
+                        <li>{{preparacion}}</li>
                     </ol>
                 </div>
                 <div class="modal-footer">
@@ -227,50 +154,26 @@
             </div>
         </div>
     </div>
+    {{/each}}
 
-    <div class="modal fade" id="modal-pastel-de-papas" tabindex="-1" aria-hidden="true">
+    {{#each recetasCol2}}
+    <div class="modal fade" id="modal{{ID}}" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Pastel de papas</h5>
-                    <p><img src="/images/icons/schedule.svg">60 min.<img src="/images/icons/person.svg">3</p>
+                    <h5 class="modal-title">{{titulo}}</h5>
+                    <p><img src="/images/icons/schedule.svg">{{minutos}} min.<img
+                            src="/images/icons/person.svg">{{porciones}}</p>
                 </div>
                 <div class="modal-body">
                     <h6>Ingredientes:</h6>
                     <ul>
-                        <li>1 kg. de papas</li>
-                        <li>1/2 kg. de carne picada</li>
-                        <li>1 pimiento rojo</li>
-                        <li>1 cebolla</li>
-                        <li>2 dientes de ajo</li>
-                        <li>1 cubito de caldo de carne</li>
-                        <li>Ajo en polvo, pimentón, pimienta, sal</li>
-                        <li>1 cucharada de manteca</li>
-                        <li>1 chorrito de leche</li>
-                        <li>2 huevos</li>
-                        <li>100 gr. de aceitunas</li>
+                        <li>{{ingredientes}}</li>
                     </ul>
                     <br>
                     <h6>Preparación</h6>
                     <ol>
-                        <li>Cortar las papas en cubos y ponerlas a hervir con sal.</li>
-                        <li>Picar la cebolla, el ajo y el pimiento rojo. Sofreir en una olla o sartén</li>
-                        <li>Cuando la cebolla está transparente, agregar la carne y sofreirla mientras se deshace
-                            con
-                            una cuchara.</li>
-                        <li>Salpimentar, agregar el cubito de caldo, el ajo en polvo, el pimentón y cocer la carne
-                            15min.</li>
-                        <li>Una vez que las patatas estén hervidas, hacer en caliente un puré con la manteca y la
-                            leche.
-                            Salpimentar.</li>
-                        <li>Agregar al relleno los huevos picados y las aceitunas</li>
-                        <li>Poner en una fuente para horno una base de puré, agregar por encima la carne (dejar que
-                            se
-                            entibie un poco) y colocar otra capa de puré. Para distribuirlo, se moja la cuchara con
-                            agua
-                            fría.</li>
-                        <li>Llevar a horno fuerte unos 15-20 min. o hasta que la parte de arriba esté
-                            crocante.</li>
+                        <li>{{preparacion}}</li>
                     </ol>
                 </div>
                 <div class="modal-footer">
@@ -279,52 +182,26 @@
             </div>
         </div>
     </div>
+    {{/each}}
 
-    <div class="modal fade" id="modal-pollo-marsala" tabindex="-1" aria-hidden="true">
+    {{#each recetasCol3}}
+    <div class="modal fade" id="modal{{ID}}" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Pollo Marsala</h5>
-                    <p><img src="/images/icons/schedule.svg">40 min.<img src="/images/icons/person.svg">3</p>
+                    <h5 class="modal-title">{{titulo}}</h5>
+                    <p><img src="/images/icons/schedule.svg">{{minutos}} min.<img
+                            src="/images/icons/person.svg">{{porciones}}</p>
                 </div>
                 <div class="modal-body">
                     <h6>Ingredientes:</h6>
                     <ul>
-                        <li>4 pechugas de pollo cortadas</li>
-                        <li>1 cucharada de harina</li>
-                        <li>Aceite de oliva</li>
-                        <li>1 cucharada de manteca</li>
-                        <li>4 dientes de ajo</li>
-                        <li>300 gr. de champiñones cortados</li>
-                        <li>3/4 taza de vino Marsala</li>
-                        <li>3/4 taza de caldo de pollo</li>
-                        <li>Perejil</li>
-                        <li>Sal y pimienta a gusto</li>
+                        <li>{{ingredientes}}</li>
                     </ul>
                     <br>
                     <h6>Preparación</h6>
                     <ol>
-                        <li>Dividir cada pechuga en 2 partes y salpimentar. Con un martillo ablandador, golpear las
-                            pechugas para que alcancen el mismo grosor en todas sus partes y al mismo tiempo
-                            conseguir
-                            un bocado más tierno.
-                            Enharinar las pechugas de pollo.
-                        </li>
-                        <li>En una sartén con un chorro de aceite de oliva y la cucharada de manteca, sofreír las
-                            pechugas
-                            aproximadamente 3 minutos por cada lado. Tienen que quedar doradas por fuera. Reservar.
-                        </li>
-                        <li>En el mismo aceite saltear los ajos previamente picados.</li>
-                        <li>Cuando los ajos empiecen a dorarse añadir los champiñones y cocinar durante un par de
-                            minutos.</li>
-                        <li>Luego agregar la harina y revolver constantemente para evitar grumos.</li>
-                        <li>Incorporar el vino marsala a la cazuela. Subir el fuego para que se evapore el alcohol.
-                        </li>
-                        <li>Añadir las pechugas de pollo y el caldo de pollo. Cocinar a fuego suave durante 10
-                            minutos
-                            aproximadamente.</li>
-                        <li>Picar unas hojas de perejil. Espolvorear por encima del pollo justo antes de servir.
-                        </li>
+                        <li>{{preparacion}}</li>
                     </ol>
                 </div>
                 <div class="modal-footer">
@@ -333,44 +210,26 @@
             </div>
         </div>
     </div>
+    {{/each}}
 
-    <div class="modal fade" id="modal-risotto-de-hongos" tabindex="-1" aria-hidden="true">
+    {{#each recetasCol4}}
+    <div class="modal fade" id="modal{{ID}}" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Risotto de hongos</h5>
-                    <p><img src="/images/icons/schedule.svg">60 min<img src="/images/icons/person.svg">4</p>
+                    <h5 class="modal-title">{{titulo}}</h5>
+                    <p><img src="/images/icons/schedule.svg">{{minutos}} min.<img
+                            src="/images/icons/person.svg">{{porciones}}</p>
                 </div>
                 <div class="modal-body">
                     <h6>Ingredientes:</h6>
                     <ul>
-                        <li>450 gr. de hongos</li>
-                        <li>350 gr. de arroz arborio</li>
-                        <li>1 cebolla</li>
-                        <li>2 dientes de ajo</li>
-                        <li>1 taza de vino blanco</li>
-                        <li>6 tazas de caldo de verduras</li>
-                        <li>75 gr. de manteca</li>
-                        <li>75 gr. de queso parmesano rallado</li>
-                        <li>Sal y pimienta</li>
-                        <li>Perejil</li>
+                        <li>{{ingredientes}}</li>
                     </ul>
                     <br>
                     <h6>Preparación</h6>
                     <ol>
-                        <li>Saltear en una sartén los dos dientes de ajo con la cebolla picada hasta que esten
-                            transparentes</li>
-                        <li>Sumar los hongos laminados (previamente limpiados) con una pizca de sal, revolver
-                            unos minutos</li>
-                        <li>Añadir el arroz y continuar la cocción durante 2 a 3 minutos hasta que los bordes del
-                            arroz
-                            comiencen a verse transparentes. </li>
-                        <li>Agregar la copa de vino y subir el fuego para que se evapore el alcohol</li>
-                        <li>Añadir 1 taza de caldo y una vez que se haya absorbido el líquido repetir la operación
-                            con
-                            el caldo restante.</li>
-                        <li>Incorporar la manteca y el queso, mezclar hasta que la
-                            manteca se funda, salpimentar y servir decorado perejil y más queso parmesano.</li>
+                        <li>{{preparacion}}</li>
                     </ol>
                 </div>
                 <div class="modal-footer">
@@ -379,508 +238,10 @@
             </div>
         </div>
     </div>
-
-    <div class="modal fade" id="modal-sopa-de-verduras" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Sopa de verduras</h5>
-                    <p><img src="/images/icons/schedule.svg">40 min<img src="/images/icons/person.svg">4</p>
-                </div>
-                <div class="modal-body">
-                    <h6>Ingredientes:</h6>
-                    <ul>
-                        <li>3 dientes de ajo</li>
-                        <li>1 cebolla</li>
-                        <li>2 zanahorias</li>
-                        <li>1/2 calabaza</li>
-                        <li>2 choclos</li>
-                        <li>1 apio</li>
-                        <li>1 puerro</li>
-                        <li>2 cubitos de caldo de verdura</li>
-                        <li>1 litro de agua</li>
-                    </ul>
-                    <br>
-                    <h6>Preparación</h6>
-                    <ol>
-                        <li>Lavamos muy bien todas las verduras que vamos a emplear en esta sopa.</li>
-                        <li>Cortamos todas las verduras menos el choclo y la calabaza en juliana y reservamos en un
-                            bol.
-                        </li>
-                        <li>En una olla grande ponemos a hervir el agua y colocamos los cubitos de caldo</li>
-                        <li>Una vez entrado en hervor añadimos todas las verduras que hemos cortado en juliana junto
-                            al
-                            choclo y la calabaza</li>
-                        <li>Cocemos a fuego moderado durante unos 30 minutos, con la olla un poco tapada. Durante
-                            ese
-                            tiempo no hace falta remover la sopa.</li>
-                        <li>Servimos muy caliente en un plato hondo. Podemos espolvorear con un poco de perejil
-                            picado.
-                        </li>
-                    </ol>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modal-sorrentinos" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Sorrentinos de jamón y queso</h5>
-                    <p><img src="/images/icons/schedule.svg">70 min<img src="/images/icons/person.svg">4</p>
-                </div>
-                <div class="modal-body">
-                    <h6>Ingredientes:</h6>
-                    <p></p>
-                    <h6>Para la masa:</h6>
-                    <ul>
-                        <li>100 gr. de harina de trigo de todo uso</li>
-                        <li>100 gr. de sémola fina de trigo</li>
-                        <li>2 huevos medianos</li>
-                        <li>Sal</li>
-                    </ul>
-                    <p></p>
-                    <h6>Para el relleno:</h6>
-                    <ul>
-                        <li>200 gr. de jamón cocido</li>
-                        <li>150 gr. de mozzarella (u otro queso)</li>
-                        <li>Pimienta negra</li>
-                    </ul>
-                    <p></p>
-                    <h6>Para la salsa:</h6>
-                    <ul>
-                        <li>1 cebolla</li>
-                        <li>2 dientes de ajo</li>
-                        <li>500 gr. de tomate triturado</li>
-                        <li>250 gr. de carne picada</li>
-                        <li>Sal, pimienta negra, pimentón y ají en polvo</li>
-                    </ul>
-                    <br>
-                    <h6>Preparación</h6>
-                    <ol>
-                        <li>Para la masa, en un bol poner la harina y la sémola, hacer un agujero en el medio,
-                            echar los huevos y una pizca de sal.</li>
-                        <li>Mezclar y amasar unos 5 minutos, dejar reposar.</li>
-                        <li>Para el relleno, en un bol colocar el jamón cocido picado, y la mozzarella, añadir un
-                            poco
-                            de pimienta y mezclar.</li>
-                        <li>Formar 20 bolas de relleno de 25 g cada una.</li>
-                        <li>Retomando la masa, dividir la pasta en 4 partes y estirarla con el rodillo o la máquina.
-                        </li>
-                        <li>Marcar una lámina de pasta con el cortador y colocar una bola de relleno en cada marca.
-                        </li>
-                        <li>Humedecer los bordes, forrar con otra lámina, aplastar un poco y cortarlos, repetir
-                            hasta
-                            formarlos todos y reservar.</li>
-                        <li>Para la salsa, sofreir los dientes de ajo y la cebolla bien picada hasta que tome un
-                            color
-                            transparente.</li>
-                        <li>Agregar la carne picada con una piza de sal, pimienta negra, pimentón y ají en polvo
-                            hasta
-                            que empiece a tomar color.</li>
-                        <li>Añadir la salsa y cocinar unos 30 minutos</li>
-                        <li>Mientras la salsa se cocina, colocar en una olla 1 litro de agua con sal hasta que rompa
-                            en
-                            hervor.</li>
-                        <li>Hervir los sorrentinos unos 3 o 4 minutos.</li>
-                        <li>Mezclarlos con la salsa y servir!</li>
-                    </ol>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modal-guiso-de-lentejas" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Guiso de lentejas</h5>
-                    <p><img src="/images/icons/schedule.svg">90 min<img src="/images/icons/person.svg">5</p>
-                </div>
-                <div class="modal-body">
-                    <h6>Ingredientes:</h6>
-                    <ul>
-                        <li>350 g de lentejas</li>
-                        <li>1 chorizo colorado</li>
-                        <li>150 g de panceta ahumada</li>
-                        <li>1 cebolla grande</li>
-                        <li>1/2 morrón rojo</li>
-                        <li>1 papa grande</li>
-                        <li>500 gr. de tomate triturado</li>
-                        <li>2 dientes de ajo</li>
-                        <li>2 hojas de laurel</li>
-                        <li>Sal, pimienta negra, pimentón, ají en polvo y orégano</li>
-                    </ul>
-                    <br>
-                    <h6>Preparación</h6>
-                    <ol>
-                        <li>Remojar las lentejas en agua fría durante 8 hrs.</li>
-                        <li>Cortar el chorizo colorado en rodajas. Poner los trozos de chorizo en una olla con agua
-                            y
-                            hervir durante 15 minutos, esto va a generar que el chorizo se desgrase y
-                            evitaremos que el guiso quede con mucho aceite.</li>
-                        <li>Cortar la panceta en pedacitos pequeños. Reservar.</li>
-                        <li>Cortar la cebolla, el morrón y el ajo de manera que quede bien picado. Luego cortar las
-                            papas en cubos y reservar.</li>
-                        <li>Colocar en una olla antiadherente y a fuego fuerte los pedacitos de panceta. No tocar
-                            por 5
-                            minutos y luego comenzar a revolver despacio, la idea es que la panceta quede bien
-                            crocante
-                            hasta dorar. Reservar. De la misma manera cocinar el chorizo a fuego fuerte hasta dorar.
-                        </li>
-                        <li>Logrado esto, sumar la cebolla, el morrón y el ajo. Añadir un poquito de sal para que
-                            las
-                            verduras larguen su agua y queden bien tiernas. Cocinar hasta que la cebolla esté
-                            transparente. </li>
-                        <li>Sumar el tomate triturado a la olla y condimentar con sal, pimienta,
-                            ají en polvo, pimentón, y una pizca de orégano.</li>
-                        <li>Por último sumar las lentejas, las papas y agregar agua hasta cubrirlas. Agregar el
-                            laurel
-                            y revolver.</li>
-                        <li>Tapar la olla y cocinar a fuego medio, cada tanto abrir la olla y revolver, procurando
-                            que
-                            el agua cubra las lentejas en todo momento. Cocinar por 20 minutos.</li>
-                        <li>Una vez que estén las lentejas cocidas a servir y disfrutar!</li>
-                    </ol>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modal-empanadas-de-carne" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Empanadas de carne</h5>
-                    <p><img src="/images/icons/schedule.svg">50 min<img src="/images/icons/person.svg">3</p>
-                </div>
-                <div class="modal-body">
-                    <h6>Ingredientes:</h6>
-                    <ul>
-                        <li>12 tapas para empanadas</li>
-                        <li>500 gr. de roast beef o bola de lomo</li>
-                        <li>2 cebollas</li>
-                        <li>2 dientes de ajo</li>
-                        <li>1/2 morrón rojo</li>
-                        <li>2 cucharadas de puré de tomates</li>
-                        <li>100 gr. de aceitunas</li>
-                        <li>3 huevos</li>
-                        <li>1 papa grande</li>
-                        <li>Sal, pimienta negra, pimentón y comino</li>
-                    </ul>
-                    <br>
-                    <h6>Preparación</h6>
-                    <ol>
-                        <li>En una olla con aceite caliente agregar la cebolla y el morrón. Dejar dorar unos minutos
-                            y
-                            cuando la cebolla este transparente, agregar el ajo, un poco de sal y pimienta.</li>
-                        <li>Subir el fuego y agregar la carne previamente cortada en cuadraditos. Mover la carne
-                            para
-                            que no quede pegada.</li>
-                        <li>Cuando la carne esté sellada agregar las 2 cucharadas de puré de
-                            tomates. Condimentar con pimenton, comino, un poco más de sal, pimienta negra y mezclar
-                            bien
-                            todo. Tapar (no del todo, dejar un pequeño hueco) y dejar cocinar media hora revolviendo
-                            de
-                            a poco.</li>
-                        <li>Mientras dejamos cocinando el relleno, hervimos los 3 huevos y la papa grande cortada en
-                            cubitos</li>
-                        <li>Sacar del fuego el relleno y dejar enfriar en la olla.</li>
-                        <li>Una vez frio, agregar las papas, las aceitunas y los huevos picados</li>
-                        <li>Repartir el relleno en las tapas de empanada, y cerrar con un repulgue tradicional.</li>
-                        <li>Poner nuestras empanadas de carne en una placa y llevar a horno fuerte hasta que estén
-                            doradas y a disfrutar!</li>
-                    </ol>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modal-pizza-de-jamon-y-queso" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Pizza de jamón y queso</h5>
-                    <p><img src="/images/icons/schedule.svg">70 min<img src="/images/icons/person.svg">2/3</p>
-                </div>
-                <div class="modal-body">
-                    <h6>Ingredientes:</h6>
-                    <p></p>
-                    <h6>Para la masa:</h6>
-                    <ul>
-                        <li>500 gr. de harina 000</li>
-                        <li>25 gr. de levadura fresca</li>
-                        <li>1/2 cucharada de sal</li>
-                        <li>1 cucharada de azúcar</li>
-                        <li>4 cucharadas de aceite de oliva</li>
-                        <li>1 taza de agua tibia</li>
-                    </ul>
-                    <p></p>
-                    <h6>Para la cobertura:</h6>
-                    <ul>
-                        <li>100 gr. de jamón</li>
-                        <li>100 gr. de mozzarella</li>
-                        <li>250 gr. de tomate triturado</li>
-                        <li>80 gr. de aceitunas</li>
-                        <li>Sal y pimienta negra</li>
-                        <li>Orégano</li>
-                    </ul>
-                    <br>
-                    <h6>Preparación</h6>
-                    <ol>
-                        <li>Para la masa, en un bol o taza colocar la levadura, media taza de agua tibia y agregar
-                            la
-                            cucharada de azúcar. Mezclar bien hasta que se formen burbujitas. Tapar con un nylon y
-                            dejar
-                            levar mas o menos 10 minutos.</li>
-                        <li>En otro bol, colocar la harina y mezclarla con la sal. Hacer un hueco en el centro, y
-                            luego
-                            volcar la media taza de agua con la levadura e incorporar el resto del agua tibia.</li>
-                        <li>Unir con las manos todos los ingredientes hasta formar una masa. Agregar en forma de
-                            hilo
-                            el aceite y volver a amasar.</li>
-                        <li>Dejar descansar la masa unos 15 minutos, y luego amasarla en una mesa con harina.
-                            Dividir la masa en dos bollos del mismo tamaño.</li>
-                        <li>Estirar la masa hasta lograr un círculo. Poner la masa en una fuente para pizza y dejar
-                            descansar hasta que leve un poquito. Aproximadamente 15 minutos.</li>
-                        <li>Llevar a horno fuerte unos 6 minutos. Esto es muy importante para que la masa quede bien
-                            cocida.</li>
-                        <li>Agregar el tomate triturado hasta cubrir toda la superficie y llevar al horno 2 minutos
-                            más.
-                        </li>
-                        <li>Añadir el jamón y la mozzarella bien distribuida a lo largo de la pizza</li>
-                        <li>Retirar una vez que la mozzarella se haya derretido y espolvorear con orégano y las
-                            aceitunas.</li>
-                    </ol>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modal-ensalada-cesar" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Ensalada César</h5>
-                    <p><img src="/images/icons/schedule.svg">30 min<img src="/images/icons/person.svg">2</p>
-                </div>
-                <div class="modal-body">
-                    <h6>Ingredientes:</h6>
-                    <p></p>
-                    <h6>Para la ensalada:</h6>
-                    <ul>
-                        <li>1 pechuga de pollo</li>
-                        <li>1 pedacito de queso parmesano</li>
-                        <li>1 lechuga (a gusto el tipo de lechuga)</li>
-                        <li>2 huevos</li>
-                        <li>100 gr. de tomates cherrys</li>
-                        <li>50 gr. de aceitunas (opcional)</li>
-                        <li>2 rodajas de pan de molde (pan lactal)</li>
-                        <li>Sal y pimienta</li>
-                    </ul>
-                    <p></p>
-                    <h6>Para la salsa:</h6>
-                    <ul>
-                        <li>1 yema de huevo</li>
-                        <li>Jugo de medio limón</li>
-                        <li>1 diente de ajo</li>
-                        <li>1 cucharadita de mostaza</li>
-                        <li>3 anchoas</li>
-                        <li>2 cucharadas de queso parmesano rallado</li>
-                        <li>Sal, pimienta y aceite</li>
-                    </ul>
-                    <br>
-                    <h6>Preparación</h6>
-                    <ol>
-                        <li>Lavar la lechuga y cortarla con la mano en trozos grandes.</li>
-                        <li>Poner una olla a hervir con agua y, una vez que esté hirviendo, colocar los huevos en
-                            ella.
-                            Dejar hervir por 7 minutos. Sacar del fuego y colocar los huevos en agua fría. Reservar.
-                        </li>
-                        <li>Cortar la pechuga de pollo en tiras de 1 cm. aproximadamente y cocinarlas en una sartén
-                            con
-                            un poco de aceite hasta que estén doradas de ambos lados. Reservar.</li>
-                        <li>Quitarle los bordes al pan y cortar en cuadraditos pequeños.</li>
-                        <li>Ponerlos en una sartén caliente hasta que estén dorados de ambas partes y crujientes.
-                        </li>
-                        <li>Para la salsa César colocar las anchoas con el ajo en un bol y machacar hasta que quede
-                            una
-                            pasta.</li>
-                        <li>En un bol aparte, batir la yema con la mostaza e integrar. Agregar la pasta de anchoa y
-                            ajos
-                            hasta que esté bien unida.</li>
-                        <li>Salpimentar e ir agregando el aceite en forma de hilo y batiendo enérgicamente hasta que
-                            espese. Agregar por último el parmesano rallado. Este proceso puede hacerse con mixer.
-                        </li>
-                        <li>Armar la ensalada: colocar en una fuente la lechuga, por encima, el pollo, el pan, los
-                            huevos, las aceitunas y los tomates cherrys. Bañar con la salsa César.</li>
-                    </ol>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modal-ñoquis-de-calabaza" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Ñoquis de calabaza</h5>
-                    <p><img src="/images/icons/schedule.svg">90 min<img src="/images/icons/person.svg">3/4</p>
-                </div>
-                <div class="modal-body">
-                    <h6>Ingredientes:</h6>
-                    <p></p>
-                    <h6>Para los ñoquis:</h6>
-                    <ul>
-                        <li>800 gr. de calabaza</li>
-                        <li>250 gr. de harina</li>
-                        <li>1 yema de huevo</li>
-                        <li>Sal y pimienta negra y aceite de oliva</li>
-                    </ul>
-                    <p></p>
-                    <h6>Para la salsa:</h6>
-                    <ul>
-                        <li>1/2 cebolla</li>
-                        <li>1 diente de ajo</li>
-                        <li>500 gr. de carne picada</li>
-                        <li>1 trozo de morrón rojo</li>
-                        <li>1 tomate</li>
-                        <li>1 chorro de vino</li>
-                        <li>1 lata de de puré de tomates</li>
-                        <li>1 taza de caldo</li>
-                        <li>Orégano</li>
-                        <li>Laurel</li>
-                        <li>Sal, pimienta negra y aceite de oliva</li>
-                    </ul>
-                    <br>
-                    <h6>Preparación</h6>
-                    <ol>
-                        <li>Para la salsa, picar la cebolla, el ajo y el morrón.</li>
-                        <li>Dorar en aceite de oliva hasta que la cebolla esté transparente. Agregar el tomate
-                            picado y
-                            saltear un par de minutos.</li>
-                        <li>Agregar la carne picada. Ir deshaciendo con una cuchara de madera. Remover continuamente
-                            hasta que la carne esté hecha completamente separada y haya cambiado de color.</li>
-                        <li>Agregar el chorro de vino y cocinar unos 2 minutos hasta que se evapore el alcohol.</li>
-                        <li>Agregar la sal, pimienta, orégano (solo un poquito) y la hoja de laurel. Incorporar el
-                            puré
-                            de tomates y el caldo. Revolver y tapar.</li>
-                        <li>Dejar hervir a fuego medio entre 30 y 45 minutos.</li>
-                        <li>Mientras dejamos que se cocine la salsa, vamos a ir haciendo la masa para los ñoquis
-                        </li>
-                        <li>Cocinar la calabaza de cualquier manera que no sea hervida, puede ser al
-                            horno, al vapor o al microondas. No debe ser hervida así no absorbe agua. Debe quedar lo
-                            más
-                            seca posible.</li>
-                        <li>Hacer un puré de calabaza y cuando esté tibio agregar la yema, la sal, la pimienta y la
-                            harina tamizada. Unirlo hasta conseguir un bollo bien homogéneo.</li>
-                        <li>Formar choricitos y darle la forma a los ñoquis con un tenedor o una ñoquera enharinada.
-                        </li>
-                        <li>Hervir por unos minutos hasta que floten.</li>
-                        <li>Colocar en una fuente con una capa de salsa en la base, luego ponerle el resto de la
-                            salsa
-                            por encima y a comer!</li>
-                    </ol>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modal-tortilla-de-papas" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Tortilla de papas</h5>
-                    <p><img src="/images/icons/schedule.svg">50 min<img src="/images/icons/person.svg">3</p>
-                </div>
-                <div class="modal-body">
-                    <h6>Ingredientes:</h6>
-                    <ul>
-                        <li>4 Huevos</li>
-                        <li>3 papas medianas</li>
-                        <li>1/2 cebolla</li>
-                        <li>Sal</li>
-                        <li>Aceite</li>
-                    </ul>
-                    <br>
-                    <h6>Preparación</h6>
-                    <ol>
-                        <li>Cortar las papas en rodajas finas, estilo papas españolas. Deben ser de tamaño mediano,
-                            ya
-                            que queremos que queden bien unidas con el huevo.</li>
-                        <li>Colocar abundante aceite en una sartén. Poner la sartén a fuego fuerte y en cuanto esté
-                            tibio el aceite vamos a agregar todas las papas. Ese es el primer truco, agregar las
-                            papas
-                            antes de que el aceite esté hirviendo. Las dejamos cocinar durante 5 minutos.</li>
-                        <li>Mientras tanto vamos a cortar la cebolla en julianas. Una vez pasados los 5 minutos
-                            agregamos las cebollas a la sartén con las papas, revolviendo suavemente.</li>
-                        <li>Luego de revolver bien para que esté todo integrado en la sartén, agregamos un poco de
-                            sal y
-                            vamos a bajar el fuego al mínimo y vamos a tapar la sartén. Pero la vamos a tapar sin
-                            que
-                            quede totalmente cerrada, dejando una mínima abertura para que pueda salir el vapor. Así
-                            la
-                            dejamos durante 15-20 minutos mientras de vez en cuando vamos revolviendo suave y
-                            procurando
-                            que no se pegue.</li>
-                        <li>Una vez que las papas estén cocidas, vamos a proceder a colarlas, dejándolas en un
-                            colador
-                            hasta que baje todo el aceite.</li>
-                        <li>Colocar los 4 huevos en un bol con un poco de sal y batirlos bien durante unos minutos.
-                        </li>
-                        <li>Agregar las papas con cebollas al bol y volver a batir hasta que esté todo integrado y
-                            unido.</li>
-                        <li>Agregamos un chorro de aceite en una sartén a fuego fuerte.</li>
-                        <li>Cuando esté bien caliente el aceite, agregamos la mezcla que tenemos en el bol y movemos
-                            la
-                            sartén agitándola durante 30 segundos. Lo que estamos haciendo es cuajar los huevos para
-                            que
-                            la tortilla española quede a la perfección.</li>
-                        <li>Luego de los 30 segundos vamos a poner el fuego bajo y con una espátula vamos a ir
-                            corrigiendo los bordes mientras se va cociendo. Vamos a cocinar la tortilla española así
-                            durante 5 minutos.</li>
-                        <li>Luego vamos a darla vuelta. Para ésto vamos a colocar un plato encima de la sarten y la
-                            damos vuelta sin miedo. Una vez que la damos vuelta vamos a emprolijar los bordes
-                            nuevamente
-                            con la espátula y dejamos cocer unos 3-4 minutos más.</li>
-                        <li>Para sacarla vamos a volver a darla vuelta. Es decir, colocamos nuevamente el plato
-                            encima
-                            de la sartén como hicimos en el punto anterior y lo damos vuelta con cuidado. Buen
-                            provecho!
-                        </li>
-                    </ol>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    {{/each}}
+    {{!-- Finalizan modales --}}
 </div>
-{{!-- Finaliza recetas --}}
+{{!-- Finaliza section recetas --}}
 
 {{!-- Comienza nosotros --}}
 <div id="nosotros" class="container-fluid bg-warning scroll-section">

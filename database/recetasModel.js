@@ -12,4 +12,35 @@ async function deleteRecetaByID(ID) {
   return rows;
 }
 
-module.exports = { getAllRecetas, deleteRecetaByID };
+async function getRecetasCol1() {
+  var query = "select * from recetas where ID between 1 and 3";
+  var rows = await pool.query(query);
+  return rows;
+}
+
+async function getRecetasCol2() {
+  var query = "select * from recetas where ID between 4 and 6";
+  var rows = await pool.query(query);
+  return rows;
+}
+
+async function getRecetasCol3() {
+  var query = "select * from recetas where ID between 7 and 9";
+  var rows = await pool.query(query);
+  return rows;
+}
+
+async function getRecetasCol4() {
+  var query = "select * from recetas where ID between 10 and 12";
+  var rows = await pool.query(query);
+  return rows;
+}
+
+module.exports = {
+  getAllRecetas,
+  deleteRecetaByID,
+  getRecetasCol1,
+  getRecetasCol2,
+  getRecetasCol3,
+  getRecetasCol4,
+};
