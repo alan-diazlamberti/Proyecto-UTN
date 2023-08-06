@@ -23,4 +23,31 @@ router.get("/new", async function (req, res, next) {
   });
 });
 
+router.post("/new", async function (req, res, next) {
+  try {
+    if (
+      req.body.titulo != "" &&
+      req.body.minutos != "" &&
+      req.body.porciones != "" &&
+      req.body.ingredientes != "" &&
+      req.body.preparacion != ""
+    ) {
+      await recetasModel.addReceta(req.body);
+      res.redirect("/admin/panel");
+    } else {
+      res.render("admin/new", {
+        layout: "admin/layoutPanel",
+        error: true,
+        errorMessage: "Todos los campos son requeridos",
+      });
+    }
+  } catch (error) {
+    res.render("/admin/new", {
+      layout: "/admin/layoutPanel",
+      error: true,
+      errorMessage: "No se pudo crear la receta",
+    });
+  }
+});
+
 module.exports = router;
