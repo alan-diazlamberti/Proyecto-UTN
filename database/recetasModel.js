@@ -36,6 +36,12 @@ async function getRecetasCol4() {
   return rows;
 }
 
+async function getRecetasCol5() {
+  var query = "select * from recetas where ID > 13";
+  var rows = await pool.query(query);
+  return rows;
+}
+
 async function addReceta(obj) {
   try {
     var query = "insert into recetas set ?";
@@ -53,5 +59,6 @@ module.exports = {
   getRecetasCol2,
   getRecetasCol3,
   getRecetasCol4,
+  getRecetasCol5,
   addReceta,
 };
