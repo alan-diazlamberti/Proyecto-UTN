@@ -71,51 +71,68 @@
                     {{/each}}
                 </div>
             </div>
-        </div>
 
-        <div class="col">
-            <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
-                {{#each recetasCol2}}
-                <div class="card">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal{{ID}}">
-                        <img src="/images/cards/risotto-de-hongos.png" class="card-img" alt="risotto-de-hongos">
-                        <div class="card-body">
-                            <h5 class="card-title">{{titulo}}</h5>
-                        </div>
-                    </a>
+            <div class="col">
+                <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+                    {{#each recetasCol2}}
+                    <div class="card">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal{{ID}}">
+                            <img src="/images/cards/risotto-de-hongos.png" class="card-img" alt="risotto-de-hongos">
+                            <div class="card-body">
+                                <h5 class="card-title">{{titulo}}</h5>
+                            </div>
+                        </a>
+                    </div>
+                    {{/each}}
                 </div>
-                {{/each}}
+            </div>
+
+            <div class="col ">
+                <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+                    {{#each recetasCol3}}
+                    <div class="card">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal{{ID}}">
+                            <img src="/images/cards/guiso-de-lentejas.png" class="card-img" alt="guiso-de-lentejas">
+                            <div class="card-body">
+                                <h5 class="card-title">{{titulo}}</h5>
+                            </div>
+                        </a>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+
+            {{!-- Columnas ocultas --}}
+            <div class="col hidden">
+                <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+                    {{#each recetasCol4}}
+                    <div class="card">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal{{ID}}">
+                            <img src="/images/cards/ensalada-cesar.png" class="card-img" alt="ensalada-caesar">
+                            <div class="card-body">
+                                <h5 class="card-title">{{titulo}}</h5>
+                            </div>
+                        </a>
+                    </div>
+                    {{/each}}
+                </div>
             </div>
         </div>
 
-        {{!-- Columnas ocultas --}}
-        <div class="col hidden">
-            <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
-                {{#each recetasCol3}}
-                <div class="card">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal{{ID}}">
-                        <img src="/images/cards/guiso-de-lentejas.png" class="card-img" alt="guiso-de-lentejas">
-                        <div class="card-body">
-                            <h5 class="card-title">{{titulo}}</h5>
-                        </div>
-                    </a>
+        <div class="row">
+            <div class="col hidden">
+                <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+                    {{#each recetasCol5}}
+                    <div class="card">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal{{ID}}">
+                            <img src="/images/cards/ensalada-cesar.png" class="card-img" alt="ensalada-caesar">
+                            <div class="card-body">
+                                <h5 class="card-title">{{titulo}}</h5>
+                            </div>
+                        </a>
+                    </div>
+                    {{/each}}
                 </div>
-                {{/each}}
-            </div>
-        </div>
-
-        <div class="col hidden">
-            <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
-                {{#each recetasCol4}}
-                <div class="card">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal{{ID}}">
-                        <img src="/images/cards/ensalada-cesar.png" class="card-img" alt="ensalada-caesar">
-                        <div class="card-body">
-                            <h5 class="card-title">{{titulo}}</h5>
-                        </div>
-                    </a>
-                </div>
-                {{/each}}
             </div>
         </div>
 
@@ -213,6 +230,34 @@
     {{/each}}
 
     {{#each recetasCol4}}
+    <div class="modal fade" id="modal{{ID}}" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">{{titulo}}</h5>
+                    <p><img src="/images/icons/schedule.svg">{{minutos}} min.<img
+                            src="/images/icons/person.svg">{{porciones}}</p>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredientes:</h6>
+                    <ul>
+                        <li>{{ingredientes}}</li>
+                    </ul>
+                    <br>
+                    <h6>Preparación</h6>
+                    <ol>
+                        <li>{{preparacion}}</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+
+    {{#each recetasCol5}}
     <div class="modal fade" id="modal{{ID}}" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">

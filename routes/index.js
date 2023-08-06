@@ -9,7 +9,14 @@ router.get("/", async function (req, res, next) {
   recetasCol2 = await recetasModel.getRecetasCol2();
   recetasCol3 = await recetasModel.getRecetasCol3();
   recetasCol4 = await recetasModel.getRecetasCol4();
-  res.render("index", { recetasCol1, recetasCol2, recetasCol3, recetasCol4 });
+  recetasCol5 = await recetasModel.getRecetasCol5();
+  res.render("index", {
+    recetasCol1,
+    recetasCol2,
+    recetasCol3,
+    recetasCol4,
+    recetasCol5,
+  });
 });
 
 router.post("/", async (req, res, next) => {
