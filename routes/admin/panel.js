@@ -38,14 +38,14 @@ router.post("/new", async function (req, res, next) {
       res.render("admin/new", {
         layout: "admin/layoutPanel",
         error: true,
-        errorMessage: "Todos los campos son requeridos",
+        errorMessage: "Todos los campos son requeridos.",
       });
     }
   } catch (error) {
     res.render("/admin/new", {
       layout: "/admin/layoutPanel",
       error: true,
-      errorMessage: "No se pudo crear la receta",
+      errorMessage: "No se pudo crear la receta.",
     });
   }
 });
