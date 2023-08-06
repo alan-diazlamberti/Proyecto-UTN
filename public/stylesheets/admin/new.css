@@ -1,0 +1,23 @@
+.input-titulo {
+    width: 400px;
+}
+
+.input-minutos,
+.input-porciones {
+    width: 130px;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 9px;
+}
+
+textarea {
+    height: 500px;
+}
+
+input:focus {
+    box-shadow: none !important;
+}
+
+textarea:focus {
+    box-shadow: none !important;
+}
