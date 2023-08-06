@@ -1,7 +1,7 @@
 var pool = require("./database");
 
 async function getAllRecetas() {
-  var query = "select * from recetas";
+  var query = "select * from recetas order by ID asc";
   var rows = await pool.query(query);
   return rows;
 }
@@ -36,6 +36,16 @@ async function getRecetasCol4() {
   return rows;
 }
 
+async function addReceta(obj) {
+  try {
+    var query = "insert into recetas set ?";
+    var rows = await pool.query(query, [obj]);
+    return rows;
+  } catch (error) {
+    throw error;
+  }
+}
+
 module.exports = {
   getAllRecetas,
   deleteRecetaByID,
@@ -43,4 +53,5 @@ module.exports = {
   getRecetasCol2,
   getRecetasCol3,
   getRecetasCol4,
+  addReceta,
 };

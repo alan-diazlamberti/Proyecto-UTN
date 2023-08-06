@@ -11,10 +11,16 @@ router.get("/", async function (req, res, next) {
   });
 });
 
-router.get("/eliminar/:ID", async function (req, res, next) {
+router.get("/delete/:ID", async function (req, res, next) {
   var ID = req.params.ID;
   await recetasModel.deleteRecetaByID(ID);
   res.redirect("/admin/panel");
+});
+
+router.get("/new", async function (req, res, next) {
+  res.render("admin/new", {
+    layout: "admin/layoutPanel",
+  });
 });
 
 module.exports = router;
