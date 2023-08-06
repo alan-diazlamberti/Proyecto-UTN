@@ -87,7 +87,7 @@ body {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     .search-bar {
         order: 3;
         margin-top: 20px;
