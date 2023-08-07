@@ -35,9 +35,8 @@ body {
 
 /* Estilos de search-bar */
 .search-box:focus {
-    background-color: white;
     box-shadow: none;
-    border-color: transparent;
+    border-color: gainsboro;
 }
 
 .btn-search {

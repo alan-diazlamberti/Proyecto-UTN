@@ -1,8 +1,14 @@
 var pool = require("./database");
 
-// Funcion para obtener todas las recetas
-async function getAllRecetas() {
-  var query = "select * from recetas order by ID asc";
+// Funcion para obtener 9 receetas
+async function getRecetasPage1() {
+  var query = "select * from recetas where ID <= 9";
+  var rows = await pool.query(query);
+  return rows;
+}
+
+async function getRecetasPage2() {
+  var query = "select * from recetas where ID > 9";
   var rows = await pool.query(query);
   return rows;
 }
@@ -75,7 +81,8 @@ async function deleteRecetaByID(ID) {
 }
 
 module.exports = {
-  getAllRecetas,
+  getRecetasPage1,
+  getRecetasPage2,
   getRecetaByID,
   deleteRecetaByID,
   getRecetasCol1,

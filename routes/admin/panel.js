@@ -3,11 +3,19 @@ var router = express.Router();
 var recetasModel = require("../../database/recetasModel");
 
 router.get("/", async function (req, res, next) {
-  var recetas = await recetasModel.getAllRecetas();
+  var page1 = await recetasModel.getRecetasPage1();
   res.render("admin/panel", {
     layout: "admin/layoutPanel",
     usuario: req.session.user,
-    recetas,
+    page1,
+  });
+});
+
+router.get("/page/2", async function (req, res, next) {
+  var page2 = await recetasModel.getRecetasPage2();
+  res.render("admin/page/2", {
+    layout: "admin/layoutPanel",
+    page2,
   });
 });
 
