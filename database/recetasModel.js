@@ -1,17 +1,20 @@
 var pool = require("./database");
 
+// Funcion para obtener todas las recetas
 async function getAllRecetas() {
   var query = "select * from recetas order by ID asc";
   var rows = await pool.query(query);
   return rows;
 }
 
-async function deleteRecetaByID(ID) {
-  var query = "delete from recetas where ID = ?";
-  var rows = await pool.query(query, [ID]);
-  return rows;
+// Funcion para obtener una receta por ID
+async function getRecetaByID(ID) {
+  var query = "select * from recetas where ID = ?";
+  var row = await pool.query(query, [ID]);
+  return row[0];
 }
 
+// Funciones para obtener 3 recetas
 async function getRecetasCol1() {
   var query = "select * from recetas where ID between 1 and 3";
   var rows = await pool.query(query);
@@ -42,18 +45,38 @@ async function getRecetasCol5() {
   return rows;
 }
 
+// Funcion para crear una nueva receta
 async function addReceta(obj) {
   try {
     var query = "insert into recetas set ?";
-    var rows = await pool.query(query, [obj]);
-    return rows;
+    var row = await pool.query(query, [obj]);
+    return row;
   } catch (error) {
     throw error;
   }
 }
 
+// Funcion para editar una receta
+async function editRecetaByID(obj, ID) {
+  try {
+    var query = "update recetas set ? where ID = ?";
+    var row = await pool.query(query, [obj, ID]);
+    return row;
+  } catch (error) {
+    throw error;
+  }
+}
+
+// Funcion para eliminar una receta
+async function deleteRecetaByID(ID) {
+  var query = "delete from recetas where ID = ?";
+  var rows = await pool.query(query, [ID]);
+  return rows;
+}
+
 module.exports = {
   getAllRecetas,
+  getRecetaByID,
   deleteRecetaByID,
   getRecetasCol1,
   getRecetasCol2,
@@ -61,4 +84,5 @@ module.exports = {
   getRecetasCol4,
   getRecetasCol5,
   addReceta,
+  editRecetaByID,
 };

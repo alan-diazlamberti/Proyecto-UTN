@@ -11,6 +11,50 @@ router.get("/", async function (req, res, next) {
   });
 });
 
+router.get("/edit/:ID", async function (req, res, next) {
+  var ID = req.params.ID;
+  var receta = await recetasModel.getRecetaByID(ID);
+  res.render("admin/edit", {
+    layout: "admin/layoutPanel",
+    receta,
+  });
+});
+
+router.post("/edit", async function (req, res, next) {
+  try {
+    let obj = {
+      titulo: req.body.titulo,
+      minutos: req.body.minutos,
+      porciones: req.body.porciones,
+      ingredientes: req.body.ingredientes,
+      preparacion: req.body.preparacion,
+    };
+
+    if (
+      req.body.titulo != "" &&
+      req.body.minutos != "" &&
+      req.body.porciones != "" &&
+      req.body.ingredientes != "" &&
+      req.body.preparacion != ""
+    ) {
+      await recetasModel.editRecetaByID(obj, req.body.ID);
+      res.redirect("/admin/panel");
+    } else {
+      res.render("admin/edit", {
+        layout: "admin/layoutPanel",
+        error: true,
+        errorMessage: "Todos los campos son requeridos.",
+      });
+    }
+  } catch (error) {
+    res.render("admin/edit", {
+      layout: "admin/layoutPanel",
+      error: true,
+      errorMessage: "No se edito la receta",
+    });
+  }
+});
+
 router.get("/delete/:ID", async function (req, res, next) {
   var ID = req.params.ID;
   await recetasModel.deleteRecetaByID(ID);
