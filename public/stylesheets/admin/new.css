@@ -5,13 +5,24 @@
 .input-minutos,
 .input-porciones {
     width: 130px;
+}
+
+.input-eliminar-imagen {
+    width: auto;
+
+}
+
+.input-minutos,
+.input-porciones,
+.input-imagen,
+.input-eliminar-imagen {
     margin-left: 6px;
     margin-right: 6px;
-    margin-top: 9px;
+    margin-top: 6px;
 }
 
 textarea {
-    height: 500px;
+    height: 430px;
 }
 
 input:focus {
