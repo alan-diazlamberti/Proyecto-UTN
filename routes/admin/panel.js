@@ -1,6 +1,12 @@
 var express = require("express");
 var router = express.Router();
+
 var recetasModel = require("../../database/recetasModel");
+
+var cloudinary = require("cloudinary").v2;
+var util = require("util");
+const uploader = util.promisify(cloudinary.uploader.upload);
+const destroy = util.promisify(cloudinary.uploader.destroy);
 
 router.get("/", async function (req, res, next) {
   var page1 = await recetasModel.getRecetasPage1();
@@ -30,12 +36,30 @@ router.get("/edit/:ID", async function (req, res, next) {
 
 router.post("/edit", async function (req, res, next) {
   try {
-    let obj = {
+    let imagen_ID = req.body.imagen_original;
+    let eliminar_imagen_vieja = false;
+    if (req.body.eliminar_imagen === "1") {
+      imagen_ID = null;
+      eliminar_imagen_vieja = true;
+    } else {
+      if (req.files && Object.keys(req.files).length > 0) {
+        imagen = req.files.imagen;
+        imagen_ID = (await uploader(imagen.tempFilePath)).public_id;
+        eliminar_imagen_vieja = true;
+      }
+    }
+
+    if (eliminar_imagen_vieja && req.body.imagen_original) {
+      await destroy(req.body.imagen_original);
+    }
+
+    var obj = {
       titulo: req.body.titulo,
       minutos: req.body.minutos,
       porciones: req.body.porciones,
       ingredientes: req.body.ingredientes,
       preparacion: req.body.preparacion,
+      imagen_ID,
     };
 
     if (
@@ -77,6 +101,12 @@ router.get("/new", async function (req, res, next) {
 
 router.post("/new", async function (req, res, next) {
   try {
+    var imagen_ID = "";
+    if (req.files && Object.keys(req.files).length > 0) {
+      imagen = req.files.imagen;
+      imagen_ID = (await uploader(imagen.tempFilePath)).public_id;
+    }
+
     if (
       req.body.titulo != "" &&
       req.body.minutos != "" &&
@@ -84,7 +114,10 @@ router.post("/new", async function (req, res, next) {
       req.body.ingredientes != "" &&
       req.body.preparacion != ""
     ) {
-      await recetasModel.addReceta(req.body);
+      await recetasModel.addReceta({
+        ...req.body,
+        imagen_ID,
+      });
       res.redirect("/admin/panel");
     } else {
       res.render("admin/new", {
