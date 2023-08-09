@@ -8,9 +8,9 @@
     {{!-- Finaliza titulo --}}
 
     {{!-- Comienza formulario --}}
-    <form action="/admin/panel/edit" method="post">
+    <form action="/admin/panel/edit" method="post" enctype="multipart/form-data">
         <input type="hidden" value="{{receta.ID}}" name="ID">
-        {{!-- Comienza titulo, minuto, porciones --}}
+        {{!-- Comienza titulo, minuto, porciones, imagen --}}
         <div class="row">
             <div class="col d-flex justify-content-center">
                 <input type="text" class="form-control input-titulo" placeholder="Titulo" name="titulo"
@@ -25,7 +25,19 @@
                     value="{{receta.porciones}}"></input>
             </div>
         </div>
-        {{!-- Finaliza titulo, minuto, porciones --}}
+        <div class="row">
+            <div class="col d-flex justify-content-center mt-1">
+                <label><input type="file" class="form-control input-imagen" name="imagen" id="imagen"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex justify-content-center mt-1">
+                <label class="form-control input-eliminar-imagen">Eliminar imagen<input type="checkbox" class="ms-2"
+                        name="eliminar_imagen" id="eliminar_imagen" value="1"></label>
+                <input type="hidden" name="imagen_original" value="{{receta.imagen}}">
+            </div>
+        </div>
+        {{!-- Finaliza titulo, minuto, porciones, imagen --}}
 
         {{!-- Comienza ingredientes y preparacion --}}
         <div class="row d-flex justify-content-center mt-3">

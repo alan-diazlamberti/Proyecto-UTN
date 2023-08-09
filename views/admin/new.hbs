@@ -8,8 +8,8 @@
     {{!-- Finaliza titulo --}}
 
     {{!-- Comienza formulario --}}
-    <form action="/admin/panel/new" method="post">
-        {{!-- Comienza titulo, minuto, porciones --}}
+    <form action="/admin/panel/new" method="post" enctype="multipart/form-data">
+        {{!-- Comienza titulo, minuto, porciones, imagen --}}
         <div class="row">
             <div class="col d-flex justify-content-center">
                 <input type="text" class="form-control input-titulo" placeholder="Titulo" name="titulo">
@@ -22,7 +22,12 @@
                     name="porciones"></input>
             </div>
         </div>
-        {{!-- Finaliza titulo, minuto, porciones --}}
+        <div class="row">
+            <div class="col d-flex justify-content-center mt-1">
+                <label><input type="file" class="form-control input-imagen" name="imagen" id="imagen"></label>
+            </div>
+        </div>
+        {{!-- Finaliza titulo, minuto, porciones, imagen --}}
 
         {{!-- Comienza ingredientes y preparacion --}}
         <div class="row d-flex justify-content-center mt-3">
