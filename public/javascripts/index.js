@@ -20,3 +20,23 @@ function verMas() {
     columnasOcultas[i].classList.remove("hidden");
   }
 }
+
+// Funcion para confirmar eliminar receta
+function confirmDelete(event, id) {
+  event.preventDefault();
+
+  Swal.fire({
+    title: "¿Estás seguro?",
+    text: "Esta acción no se puede deshacer",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Eliminar",
+    cancelButtonText: "Cancelar",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = "/admin/panel/delete/" + id;
+    }
+  });
+}
