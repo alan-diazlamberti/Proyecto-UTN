@@ -36,6 +36,14 @@
                 </button></a>
         </div>
     </div>
+
+    <div class="row mb-3">
+        {{#if is_search}}
+        {{#unless page1.length}}
+        <p>No se encontraron resultados que contengan "<strong>{{q}}</strong>".</p>
+        {{/unless}}
+        {{/if}}
+    </div>
     {{!-- Finaliza row options --}}
 
     {{!-- Comienza table --}}

@@ -19,7 +19,7 @@ router.get("/", async function (req, res, next) {
     layout: "admin/layoutPanel",
     usuario: req.session.user,
     page1,
-    is_search: req.query.q != undefined,
+    is_search: req.query.q !== undefined,
     q: req.query.q,
   });
 });
