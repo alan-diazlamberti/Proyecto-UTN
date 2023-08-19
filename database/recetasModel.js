@@ -82,9 +82,10 @@ async function deleteRecetaByID(ID) {
 
 // Funcion para buscar una receta
 async function searchReceta(search) {
-  var query = "select * from recetas where titulo like ?";
-  var rows = await pool.query(query, ["%" + search + "%"]);
-  return row;
+  var query =
+    "select * from recetas where titulo like ? or ingredientes like ? order by ID asc";
+  var rows = await pool.query(query, ["%" + search + "%", "%" + search + "%"]);
+  return rows;
 }
 
 module.exports = {

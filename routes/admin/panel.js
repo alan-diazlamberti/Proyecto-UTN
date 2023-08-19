@@ -9,19 +9,33 @@ const uploader = util.promisify(cloudinary.uploader.upload);
 const destroy = util.promisify(cloudinary.uploader.destroy);
 
 router.get("/", async function (req, res, next) {
-  var page1 = await recetasModel.getRecetasPage1();
+  var page1;
+  if (req.query.q === undefined) {
+    page1 = await recetasModel.getRecetasPage1();
+  } else {
+    page1 = await recetasModel.searchReceta(req.query.q);
+  }
   res.render("admin/panel", {
     layout: "admin/layoutPanel",
     usuario: req.session.user,
     page1,
+    is_search: req.query.q != undefined,
+    q: req.query.q,
   });
 });
 
 router.get("/page/2", async function (req, res, next) {
-  var page2 = await recetasModel.getRecetasPage2();
+  var page2;
+  if (req.query.q === undefined) {
+    page2 = await recetasModel.getRecetasPage2();
+  } else {
+    page2 = await recetasModel.searchReceta(req.query.q);
+  }
   res.render("admin/page/2", {
     layout: "admin/layoutPanel",
     page2,
+    is_search: req.query.q != undefined,
+    q: req.query.q,
   });
 });
 
