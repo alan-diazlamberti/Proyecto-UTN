@@ -8,101 +8,132 @@ var cloudinary = require("cloudinary").v2;
 
 /* GET home page. */
 router.get("/", async function (req, res, next) {
-  recetasCol1 = await recetasModel.getRecetasCol1();
-  recetasCol2 = await recetasModel.getRecetasCol2();
-  recetasCol3 = await recetasModel.getRecetasCol3();
-  recetasCol4 = await recetasModel.getRecetasCol4();
-  recetasCol5 = await recetasModel.getRecetasCol5();
-  recetasCol1 = recetasCol1.map((receta) => {
-    if (receta.imagen_ID) {
-      let imagen = cloudinary.url(receta.imagen_ID, {
-        crop: "fill",
-      });
-      return {
-        ...receta,
-        imagen,
-      };
-    } else {
-      return {
-        ...receta,
-        imagen: "/images/cards/no-image.png",
-      };
-    }
-  });
-  recetasCol2 = recetasCol2.map((receta) => {
-    if (receta.imagen_ID) {
-      let imagen = cloudinary.url(receta.imagen_ID, {
-        crop: "fill",
-      });
-      return {
-        ...receta,
-        imagen,
-      };
-    } else {
-      return {
-        ...receta,
-        imagen: "/images/cards/no-image.png",
-      };
-    }
-  });
+  var recetasCol1;
+  var recetasCol2;
+  var recetasCol3;
+  var recetasCol4;
+  var recetasCol5;
+  var allRecetas;
 
-  recetasCol3 = recetasCol3.map((receta) => {
-    if (receta.imagen_ID) {
-      let imagen = cloudinary.url(receta.imagen_ID, {
-        crop: "fill",
-      });
-      return {
-        ...receta,
-        imagen,
-      };
-    } else {
-      return {
-        ...receta,
-        imagen: "/images/cards/no-image.png",
-      };
-    }
-  });
+  if (req.query.q == undefined) {
+    recetasCol1 = await recetasModel.getRecetasCol1();
+    recetasCol2 = await recetasModel.getRecetasCol2();
+    recetasCol3 = await recetasModel.getRecetasCol3();
+    recetasCol4 = await recetasModel.getRecetasCol4();
+    recetasCol5 = await recetasModel.getRecetasCol5();
 
-  recetasCol4 = recetasCol4.map((receta) => {
-    if (receta.imagen_ID) {
-      let imagen = cloudinary.url(receta.imagen_ID, {
-        crop: "fill",
-      });
-      return {
-        ...receta,
-        imagen,
-      };
-    } else {
-      return {
-        ...receta,
-        imagen: "/images/cards/no-image.png",
-      };
-    }
-  });
+    recetasCol1 = recetasCol1.map((receta) => {
+      if (receta.imagen_ID) {
+        let imagen = cloudinary.url(receta.imagen_ID, {
+          crop: "fill",
+        });
+        return {
+          ...receta,
+          imagen,
+        };
+      } else {
+        return {
+          ...receta,
+          imagen: "/images/cards/no-image.png",
+        };
+      }
+    });
+    recetasCol2 = recetasCol2.map((receta) => {
+      if (receta.imagen_ID) {
+        let imagen = cloudinary.url(receta.imagen_ID, {
+          crop: "fill",
+        });
+        return {
+          ...receta,
+          imagen,
+        };
+      } else {
+        return {
+          ...receta,
+          imagen: "/images/cards/no-image.png",
+        };
+      }
+    });
 
-  recetasCol5 = recetasCol5.map((receta) => {
-    if (receta.imagen_ID) {
-      let imagen = cloudinary.url(receta.imagen_ID, {
-        crop: "fill",
-      });
-      return {
-        ...receta,
-        imagen,
-      };
-    } else {
-      return {
-        ...receta,
-        imagen: "/images/cards/no-image.png",
-      };
-    }
-  });
+    recetasCol3 = recetasCol3.map((receta) => {
+      if (receta.imagen_ID) {
+        let imagen = cloudinary.url(receta.imagen_ID, {
+          crop: "fill",
+        });
+        return {
+          ...receta,
+          imagen,
+        };
+      } else {
+        return {
+          ...receta,
+          imagen: "/images/cards/no-image.png",
+        };
+      }
+    });
+
+    recetasCol4 = recetasCol4.map((receta) => {
+      if (receta.imagen_ID) {
+        let imagen = cloudinary.url(receta.imagen_ID, {
+          crop: "fill",
+        });
+        return {
+          ...receta,
+          imagen,
+        };
+      } else {
+        return {
+          ...receta,
+          imagen: "/images/cards/no-image.png",
+        };
+      }
+    });
+
+    recetasCol5 = recetasCol5.map((receta) => {
+      if (receta.imagen_ID) {
+        let imagen = cloudinary.url(receta.imagen_ID, {
+          crop: "fill",
+        });
+        return {
+          ...receta,
+          imagen,
+        };
+      } else {
+        return {
+          ...receta,
+          imagen: "/images/cards/no-image.png",
+        };
+      }
+    });
+  } else {
+    allRecetas = await recetasModel.searchReceta(req.query.q);
+    allRecetas = allRecetas.map((receta) => {
+      if (receta.imagen_ID) {
+        let imagen = cloudinary.url(receta.imagen_ID, {
+          crop: "fill",
+        });
+        return {
+          ...receta,
+          imagen,
+        };
+      } else {
+        return {
+          ...receta,
+          imagen: "/images/cards/no-image.png",
+        };
+      }
+    });
+  }
 
   res.render("index", {
+    allRecetas,
     recetasCol1,
     recetasCol2,
     recetasCol3,
     recetasCol4,
     recetasCol5,
+    is_search: req.query.q !== undefined,
+    q: req.query.q,
   });
 });
 

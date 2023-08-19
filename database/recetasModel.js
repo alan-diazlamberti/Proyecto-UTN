@@ -1,6 +1,12 @@
 var pool = require("./database");
 
 // Funcion para obtener 9 receetas
+async function getAllRecetas() {
+  var query = "select * from recetas";
+  var rows = await pool.query(query);
+  return rows;
+}
+
 async function getRecetasPage1() {
   var query = "select * from recetas where ID <= 9";
   var rows = await pool.query(query);
@@ -89,6 +95,7 @@ async function searchReceta(search) {
 }
 
 module.exports = {
+  getAllRecetas,
   getRecetasPage1,
   getRecetasPage2,
   getRecetaByID,

@@ -1,7 +1,7 @@
 {{!-- Comienza section navbar --}}
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid ms-3 p-3">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="http://localhost:3000/">
             <img class="logo" src="/images/logo.png" alt="logo" width="70" height="70"><span class="titulo">AyM
                 Cocina</span>
         </a>
@@ -38,7 +38,8 @@
         <div class="col-6 offset-3 search-box">
             <h1 class="fw-bold text-center">¿Que cocinamos?</h1>
             <form class="d-flex mt-4">
-                <input class="form-control search-bar px-4" type="search" placeholder="Buscar" aria-label="Search">
+                <input class="form-control search-bar px-4" type="search" placeholder="Buscar" aria-label="Search"
+                    name="q" value="{{q}}">
                 <button class="btn btn-light btn-search ms-3 px-4" type="submit"><img src="/images/icons/search.svg"
                         alt="searchIcon"></button>
             </form>
@@ -53,6 +54,14 @@
         <div class="col py-4">
             <h2 class="text-center fw-bold">Recetas</h2>
         </div>
+    </div>
+
+    <div class="row mb-3">
+        {{#if is_search}}
+        {{#unless allRecetas.length}}
+        <p class="text-center">No se encontraron resultados que contengan "<strong>{{q}}</strong>".</p>
+        {{/unless}}
+        {{/if}}
     </div>
     {{!-- Comienzan cards --}}
     <div class="container-recetas">
@@ -133,6 +142,21 @@
                     </div>
                     {{/each}}
                 </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+                {{#each allRecetas}}
+                <div class="card">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal{{ID}}">
+                        <img src="{{imagen}}" class="card-img" alt="matambre-a-la-pizza">
+                        <div class="card-body">
+                            <h5 class="card-title">{{titulo}}</h5>
+                        </div>
+                    </a>
+                </div>
+                {{/each}}
             </div>
         </div>
 
@@ -258,6 +282,34 @@
     {{/each}}
 
     {{#each recetasCol5}}
+    <div class="modal fade" id="modal{{ID}}" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">{{titulo}}</h5>
+                    <p><img src="/images/icons/schedule.svg">{{minutos}} min.<img
+                            src="/images/icons/person.svg">{{porciones}}</p>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredientes:</h6>
+                    <ul>
+                        {{{ingredientes}}}
+                    </ul>
+                    <br>
+                    <h6>Preparación:</h6>
+                    <ol>
+                        {{{preparacion}}}
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+
+    {{#each allRecetas}}
     <div class="modal fade" id="modal{{ID}}" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
