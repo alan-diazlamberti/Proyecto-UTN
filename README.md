@@ -27,7 +27,7 @@
 `HTML` `CSS` `Javascript` `Bootstrap` `Node.js` `MySQL`
 
 ------------
-**Copyright 2023 &copy; Diseñado por Alan Diaz Lamberti**
+**&copy; 2023 Alan Diaz Lamberti**
 
 ------------
 **21 de Agosto de 2023**
