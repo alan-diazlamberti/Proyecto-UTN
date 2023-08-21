@@ -1,4 +1,5 @@
 #AyM Cocina
+
 ![AyM-Cocina](https://res.cloudinary.com/dvrkhos9z/image/upload/v1692645558/logo_qj3q5e-Thumbnail_fnskkx.png "AyM-Cocina")
 
 ------------
@@ -8,6 +9,7 @@
 
 ------------
 ###Misión
+
 **Crear una aplicacion básica, haciendo uso de  los conocimientos adquiridos** en el curso de Programación Web Inicial de la Universidad Tecnológica Nacional, combinando diferentes lenguajes de programación según los requerimientos demandados.
 
 ------------
