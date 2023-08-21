@@ -5,7 +5,7 @@
 ------------
 ### Visión
 
-**Almacenar recetas** propias del desarrollador. Es una aplicación destinada puramente a fines personales pero con la excusa de realizar mi primer proyecto como programador web.
+**Almacenar recetas** propias del desarrollador y facilitar la creación y edición de las mismas. Es una aplicación destinada puramente a fines personales pero con la excusa de realizar mi primer proyecto y enseñar al mundo mis conocimientos.
 
 ------------
 ### Misión
