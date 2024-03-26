@@ -12,7 +12,7 @@
 
 ### Misión
 
-**Crear una aplicacion básica, haciendo uso de los conocimientos adquiridos** en el curso de Programación Web Inicial de la Universidad Tecnológica Nacional, combinando diferentes lenguajes de programación según los requerimientos demandados.
+**Crear una web básica, pero completa, haciendo uso de los conocimientos adquiridos** en el curso de Programación Web Inicial de la Universidad Tecnológica Nacional, combinando diferentes lenguajes de programación según los requerimientos demandados.
 
 ---
 
