@@ -1,6 +1,6 @@
-# [AyM Cocina](https://proyecto-utn-86c23b1be57c.herokuapp.com/ "AyM Cocina")
+# AyM Cocina
 
-![AyM-Cocina](https://res.cloudinary.com/dvrkhos9z/image/upload/v1692645558/logo_qj3q5e-Thumbnail_fnskkx.png "AyM-Cocina")
+[![](https://res.cloudinary.com/dvrkhos9z/image/upload/v1692645558/logo_qj3q5e-Thumbnail_fnskkx.png)](https://proyecto-utn-86c23b1be57c.herokuapp.com/)
 
 ---
 
@@ -12,7 +12,7 @@
 
 ### Misión
 
-**Crear una aplicacion básica, haciendo uso de los conocimientos adquiridos** en el curso de Programación Web Inicial de la Universidad Tecnológica Nacional, combinando diferentes lenguajes de programación según los requerimientos demandados.
+**Crear una web básica, pero completa, haciendo uso de los conocimientos adquiridos** en el curso de Programación Web Inicial de la Universidad Tecnológica Nacional, combinando diferentes lenguajes de programación según los requerimientos demandados.
 
 ---
 
